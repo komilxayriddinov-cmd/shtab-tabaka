@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHTAB TABAKA — Haqiqiy Tovuq Tabaka va Marosimlar Uchun Buyurtmalar</title>
+  <meta name="description" content="SHTAB TABAKA — Toshkentda eng mazali, qarsildoq tovuq tabaka, tovuq oyoqlari va qanotlari. To'y, marosim, ehson va oilaviy tadbirlar uchun ulgurji buyurtmalar." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: '#6B0F1A',
+            crimson: '#8B1522',
+            crimsonDark: '#4A0810',
+            gold: '#F5B800',
+            goldHover: '#D9A300',
+            cream: '#FAF6F0',
+            sand: '#F2EAE0',
+            charcoal: '#18090B',
+            muted: '#5C474A'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            'solid-gold': '6px 6px 0px 0px #F5B800',
+            'solid-burgundy': '6px 6px 0px 0px #6B0F1A',
+            'solid-dark': '6px 6px 0px 0px #18090B',
+            'elevated': '0 20px 40px -15px rgba(24, 9, 11, 0.18)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       STRICT SOLID COLOR DESIGN SYSTEM (NO GRADIENTS ANYWHERE)
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FAF6F0;
+      color: #18090B;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* Architectural Double Border Frame */
+    .luxury-frame {
+      border: 2px solid #F5B800;
+      outline: 2px solid #6B0F1A;
+      outline-offset: -8px;
+    }
+
+    /* Scroll Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom Solid Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF6F0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #6B0F1A;
+      border: 2px solid #FAF6F0;
+      border-radius: 6px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #8B1522;
+    }
+
+    /* Card Hover Lift */
+    .menu-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .menu-card:hover {
+      transform: translateY(-6px);
+      border-color: #6B0F1A;
+      box-shadow: 0 22px 35px -12px rgba(107, 15, 26, 0.22);
+    }
+
+    .menu-card:hover .menu-img {
+      transform: scale(1.06);
+    }
+
+    .menu-img {
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* Button Solid Press Effect */
+    .btn-solid-gold {
+      background-color: #F5B800;
+      color: #18090B;
+      border: 2px solid #18090B;
+      box-shadow: 4px 4px 0px 0px #18090B;
+      transition: all 0.2s ease;
+    }
+    .btn-solid-gold:hover {
+      background-color: #D9A300;
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px 0px #18090B;
+    }
+    .btn-solid-gold:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px 0px #18090B;
+    }
+
+    .btn-solid-burgundy {
+      background-color: #6B0F1A;
+      color: #FFFFFF;
+      border: 2px solid #6B0F1A;
+      box-shadow: 4px 4px 0px 0px #F5B800;
+      transition: all 0.2s ease;
+    }
+    .btn-solid-burgundy:hover {
+      background-color: #8B1522;
+      border-color: #8B1522;
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px 0px #F5B800;
+    }
+    .btn-solid-burgundy:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px 0px #F5B800;
+    }
+
+    /* FAQ Accordion transition */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 360px;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
+      background-color: #F5B800;
+      color: #18090B;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-charcoal">
+
+  <!-- ==========================================================================
+       TOP ANNOUNCEMENT & DIRECT CALL BAR
+       ========================================================================== -->
+  <div class="bg-crimsonDark text-white border-b-2 border-gold text-xs sm:text-sm py-2.5 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-gold"></span>
+        <span data-i18n="topbar_text">To‘y, marosim va ehsonlar uchun 100% Halol tovuq tabaka buyurtmalari!</span>
+      </div>
+      <div class="flex items-center gap-4 sm:gap-6 font-semibold">
+        <a href="tel:+998999530505" class="hover:text-gold transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone-volume text-gold"></i>
+          <span data-i18n="branch_shtab_short">Shtab:</span> +998 99 953 05 05
+        </a>
+        <span class="hidden md:inline text-gold">|</span>
+        <a href="tel:+998997530505" class="hidden sm:flex hover:text-gold transition-colors items-center gap-1.5">
+          <i class="fa-solid fa-phone-volume text-gold"></i>
+          <span data-i18n="branch_chilonzor_short">Chilonzor:</span> +998 99 753 05 05
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       1. STICKY HEADER
+       ========================================================================== -->
+  <header id="main-header" class="sticky top-0 z-40 bg-burgundy text-white border-b-4 border-gold transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-12 h-12 rounded-xl bg-gold text-charcoal border-2 border-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+          <!-- Custom Crest SVG Icon -->
+          <svg class="w-8 h-8" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 46H52L49 54H15L12 46Z" fill="#6B0F1A"/>
+            <path d="M16 42C16 29 24 20 35 20C43 20 49 25 51 33C53 31 56 31 57 34C58 37 54 42 49 42H16Z" fill="#18090B"/>
+            <circle cx="28" cy="30" r="3" fill="#F5B800"/>
+            <path d="M22 14L26 20L32 12L38 20L42 14" stroke="#6B0F1A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <span class="block font-serif font-extrabold text-xl sm:text-2xl tracking-wider text-white leading-none">
+            SHTAB <span class="text-gold">TABAKA</span>
+          </span>
+          <span class="block text-[11px] uppercase tracking-widest text-gold font-bold mt-1" data-i18n="logo_subtitle">
+            Premium Tovuq Taomlari
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden xl:flex items-center gap-7 text-sm font-bold tracking-wide uppercase">
+        <a href="#about" class="hover:text-gold transition-colors py-1" data-i18n="nav_about">Biz haqimizda</a>
+        <a href="#menu" class="hover:text-gold transition-colors py-1" data-i18n="nav_menu">Menyu</a>
+        <a href="#services" class="hover:text-gold transition-colors py-1" data-i18n="nav_services">Xizmatlar</a>
+        <a href="#gallery" class="hover:text-gold transition-colors py-1" data-i18n="nav_gallery">Galereya</a>
+        <a href="#advantages" class="hover:text-gold transition-colors py-1" data-i18n="nav_advantages">Afzalliklar</a>
+        <a href="#faq" class="hover:text-gold transition-colors py-1" data-i18n="nav_faq">FAQ</a>
+        <a href="#branches" class="hover:text-gold transition-colors py-1" data-i18n="nav_branches">Filiallar</a>
+      </nav>
+
+      <!-- Right Controls: Language Switcher + Order CTA + Mobile Toggle -->
+      <div class="flex items-center gap-3">
+        <!-- Language Toggle UZ / RU -->
+        <div class="inline-flex rounded-lg bg-crimsonDark p-1 border-2 border-gold" role="group" aria-label="Language switcher">
+          <button type="button" id="lang-uz-btn" onclick="setLanguage('uz')" class="px-2.5 py-1 rounded-md text-xs font-extrabold uppercase transition-colors bg-gold text-charcoal">
+            UZ
+          </button>
+          <button type="button" id="lang-ru-btn" onclick="setLanguage('ru')" class="px-2.5 py-1 rounded-md text-xs font-extrabold uppercase transition-colors text-white hover:text-gold">
+            RU
+          </button>
+        </div>
+
+        <!-- Order Modal Trigger Button -->
+        <button type="button" onclick="openOrderModal()" class="hidden sm:inline-flex items-center gap-2 btn-solid-gold font-extrabold text-sm px-4 py-2.5 rounded-xl">
+          <i class="fa-solid fa-utensils"></i>
+          <span data-i18n="btn_order_now">Buyurtma berish</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" id="mobile-menu-btn" onclick="toggleMobileMenu()" class="xl:hidden w-11 h-11 rounded-xl bg-crimson border-2 border-gold text-gold flex items-center justify-center text-xl focus:outline-none" aria-label="Toggle Menu">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-crimsonDark border-t-2 border-gold px-4 pt-4 pb-6 space-y-3">
+      <div class="grid grid-cols-2 gap-2 text-sm font-bold uppercase">
+        <a href="#about" onclick="closeMobileMenu()" class="p-3 rounded-lg bg-burgundy border border-gold/40 hover:border-gold hover:text-gold" data-i18n="nav_about">Biz haqimizda</a>
+        <a href="#menu" onclick="closeMobileMenu()" class="p-3 rounded-lg bg-burgundy border border-gold/40 hover:border-gold hover:text-gold" data-i18n="nav_menu">Menyu</a>
+        <a href="#services" onclick="closeMobileMenu()" class="p-3 rounded-lg bg-burgundy border border-gold/40 hover:border-gold hover:text-gold" data-i18n="nav_services">Xizmatlar</a>
+        <a href="#gallery" onclick="closeMobileMenu()" class="p-3 rounded-lg bg-burgundy border border-gold/40 hover:border-gold hover:text-gold" data-i18n="nav_gallery">Galereya</a>
+        <a href="#advantages" onclick="closeMobileMenu()" class="p-3 rounded-lg bg-burgundy border border-gold/40 hover:border-gold hover:text-gold" data-i18n="nav_advantages">Afzalliklar</a>
+        <a href="#faq" onclick="closeMobileMenu()" class="p-3 rounded-lg bg-burgundy border border-gold/40 hover:border-gold hover:text-gold" data-i18n="nav_faq">FAQ</a>
+        <a href="#branches" onclick="closeMobileMenu()" class="col-span-2 p-3 rounded-lg bg-burgundy border border-gold/40 hover:border-gold hover:text-gold text-center" data-i18n="nav_branches">Filiallar va Aloqa</a>
+      </div>
+      <div class="pt-2 flex flex-col sm:flex-row gap-3">
+        <button type="button" onclick="closeMobileMenu(); openOrderModal();" class="w-full btn-solid-gold font-extrabold py-3.5 rounded-xl flex items-center justify-center gap-2">
+          <i class="fa-solid fa-fire-burner"></i>
+          <span data-i18n="btn_order_now">Buyurtma berish</span>
+        </button>
+        <a href="tel:+998999530505" class="w-full bg-white text-charcoal font-extrabold py-3 rounded-xl border-2 border-gold flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone text-burgundy"></i>
+          <span>+998 99 953 05 05</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+  <section id="hero" class="bg-burgundy text-white border-b-8 border-gold py-12 sm:py-16 lg:py-24 relative overflow-hidden">
+    <!-- Decorative Solid Architectural Corner Elements -->
+    <div class="hidden lg:block absolute top-6 left-6 w-20 h-20 border-t-4 border-l-4 border-gold/40 pointer-events-none"></div>
+    <div class="hidden lg:block absolute bottom-6 right-6 w-20 h-20 border-b-4 border-r-4 border-gold/40 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Column: Brand Headline & CTAs -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <div class="inline-flex items-center gap-2.5 bg-crimsonDark border-2 border-gold px-4 py-2 rounded-full">
+            <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+            <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-gold" data-i18n="hero_badge">
+              100% Halol • Maxsus Pressda Qovurilgan
+            </span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white">
+            <span data-i18n="hero_title_1">Haqiqiy Qarsildoq</span>
+            <span class="block text-gold mt-1" data-i18n="hero_title_2">SHTAB TABAKA</span>
+            <span class="block text-2xl sm:text-3xl lg:text-4xl font-bold mt-2 text-cream" data-i18n="hero_title_3">
+              To‘y, Tadbir va Dasturxonlar Ko‘rki!
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-cream/90 max-w-2xl leading-relaxed font-normal" data-i18n="hero_desc">
+            Maxsus og‘ir cho‘yan press ostida qizarib pishgan, sersuv va xushbo‘y ziravorli tovuq tabaka hamda tovuq oyoqlari. Oilaviy kechki ovqatdan tortib, 500 kishilik katta to‘y va marosimlargacha issiq holda yetkazib beramiz.
+          </p>
+
+          <!-- Primary CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <button type="button" onclick="openOrderModal()" class="btn-solid-gold text-base sm:text-lg font-extrabold px-8 py-4 rounded-xl flex items-center justify-center gap-3">
+              <i class="fa-solid fa-utensils text-lg"></i>
+              <span data-i18n="hero_cta_order">Hoziroq buyurtma berish</span>
+            </button>
+            <a href="#menu" class="bg-crimson hover:bg-crimsonDark text-white border-2 border-gold font-extrabold text-base sm:text-lg px-8 py-4 rounded-xl flex items-center justify-center gap-3 transition-colors">
+              <i class="fa-solid fa-book-open text-gold"></i>
+              <span data-i18n="hero_cta_menu">Menyuni ko‘rish</span>
+            </a>
+          </div>
+
+          <!-- Direct Branch Call Badges -->
+          <div class="pt-4 border-t-2 border-crimson grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a href="tel:+998999530505" class="bg-crimsonDark hover:bg-crimson border-2 border-gold/80 rounded-xl p-3.5 flex items-center gap-3.5 transition-transform hover:-translate-y-0.5">
+              <div class="w-11 h-11 rounded-lg bg-gold text-charcoal flex items-center justify-center text-lg font-bold shrink-0">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-wider text-gold font-bold" data-i18n="branch_1_label">Shtab filiali</span>
+                <span class="block text-base sm:text-lg font-extrabold text-white">+998 99 953 05 05</span>
+              </div>
+            </a>
+
+            <a href="tel:+998997530505" class="bg-crimsonDark hover:bg-crimson border-2 border-gold/80 rounded-xl p-3.5 flex items-center gap-3.5 transition-transform hover:-translate-y-0.5">
+              <div class="w-11 h-11 rounded-lg bg-gold text-charcoal flex items-center justify-center text-lg font-bold shrink-0">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-wider text-gold font-bold" data-i18n="branch_2_label">Chilonzor filiali</span>
+                <span class="block text-base sm:text-lg font-extrabold text-white">+998 99 753 05 05</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Featured Roasted Chicken Tabaka Image Frame -->
+        <div class="lg:col-span-5 relative">
+          <div class="bg-crimsonDark p-3 sm:p-4 rounded-3xl border-4 border-gold shadow-solid-dark relative">
+            <div class="overflow-hidden rounded-2xl border-2 border-gold/60 bg-charcoal aspect-[4/3] sm:aspect-[5/4]">
+              <img
+                src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=1100&q=85"
+                alt="SHTAB TABAKA Signature Roasted Chicken"
+                onerror="this.onerror=null;this.src='https://placehold.co/900x720/6B0F1A/F5B800?text=SHTAB+TABAKA';"
+                class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+
+            <!-- Floating Solid Price/Hit Badge Top Left -->
+            <div class="absolute -top-4 -left-3 sm:-left-5 bg-gold text-charcoal border-2 border-charcoal px-4 py-2 rounded-xl shadow-solid-dark font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-crown text-burgundy"></i>
+              <span data-i18n="hero_img_badge">Bestseller #1</span>
+            </div>
+
+            <!-- Floating Bottom Caption Card -->
+            <div class="mt-4 bg-burgundy border-2 border-gold rounded-2xl p-4 flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs uppercase tracking-widest text-gold font-bold" data-i18n="hero_card_sub">Maxsus retsept asosida</p>
+                <h2 class="font-serif text-lg sm:text-xl font-bold text-white" data-i18n="hero_card_title">Klassik Shtab Tabaka (Butun)</h2>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="block text-xs text-cream/80" data-i18n="hero_card_weight">750–850 gr</span>
+                <span class="block text-lg sm:text-xl font-extrabold text-gold">68 000 UZS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Stats Strip -->
+      <div class="mt-14 pt-10 border-t-2 border-gold/40 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="bg-crimsonDark border-2 border-gold rounded-2xl p-5 text-center">
+          <span class="block font-serif text-3xl sm:text-4xl font-extrabold text-gold">10+</span>
+          <span class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wider mt-1" data-i18n="stat_1">Yillik tajriba va an’ana</span>
+        </div>
+        <div class="bg-crimsonDark border-2 border-gold rounded-2xl p-5 text-center">
+          <span class="block font-serif text-3xl sm:text-4xl font-extrabold text-gold">2 500+</span>
+          <span class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wider mt-1" data-i18n="stat_2">O‘tkazilgan to‘y va marosimlar</span>
+        </div>
+        <div class="bg-crimsonDark border-2 border-gold rounded-2xl p-5 text-center">
+          <span class="block font-serif text-3xl sm:text-4xl font-extrabold text-gold">100%</span>
+          <span class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wider mt-1" data-i18n="stat_3">Halol va yangi mahsulot</span>
+        </div>
+        <div class="bg-crimsonDark border-2 border-gold rounded-2xl p-5 text-center">
+          <span class="block font-serif text-3xl sm:text-4xl font-extrabold text-gold">2 ta</span>
+          <span class="block text-xs sm:text-sm font-bold text-white uppercase tracking-wider mt-1" data-i18n="stat_4">Toshkent bo‘ylab faol filial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. ABOUT US SECTION (BIZ HAQIMIZDA)
+       ========================================================================== -->
+  <section id="about" class="py-16 sm:py-24 bg-cream border-b-4 border-burgundy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Image Composition -->
+        <div class="lg:col-span-6 reveal">
+          <div class="relative bg-burgundy p-4 sm:p-6 rounded-3xl border-4 border-charcoal shadow-solid-gold">
+            <img
+              src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1000&q=85"
+              alt="Grilled Chicken Preparation at SHTAB TABAKA"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/6B0F1A/F5B800?text=Halol+Tovuq+Tabaka';"
+              class="w-full h-72 sm:h-96 object-cover rounded-2xl border-2 border-gold"
+            />
+            <div class="mt-4 grid grid-cols-2 gap-4 text-white">
+              <div class="bg-crimsonDark border-2 border-gold rounded-xl p-4">
+                <i class="fa-solid fa-scale-balanced text-gold text-2xl mb-2"></i>
+                <h3 class="font-bold text-sm sm:text-base" data-i18n="about_card_1_title">Og‘ir cho‘yan press</h3>
+                <p class="text-xs text-cream/80 mt-1" data-i18n="about_card_1_desc">Tovuq usti qarsildoq, ichi esa yumshoq va sersuv bo‘lishini ta’minlaydi.</p>
+              </div>
+              <div class="bg-crimsonDark border-2 border-gold rounded-xl p-4">
+                <i class="fa-solid fa-certificate text-gold text-2xl mb-2"></i>
+                <h3 class="font-bold text-sm sm:text-base" data-i18n="about_card_2_title">Saralangan ziravorlar</h3>
+                <p class="text-xs text-cream/80 mt-1" data-i18n="about_card_2_desc">Sun’iy qo‘shimchalarsiz, tabiiy sarimsoq va tog‘ ziravorlari marinadi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Text Content -->
+        <div class="lg:col-span-6 space-y-6 reveal">
+          <div class="inline-flex items-center gap-2 bg-burgundy text-gold px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest border-2 border-gold">
+            <i class="fa-solid fa-award"></i>
+            <span data-i18n="about_badge">Biz haqimizda</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal leading-tight" data-i18n="about_title">
+            SHTAB TABAKA — Mazali Ta’m va To‘kin Dasturxon Garantiyasi
+          </h2>
+
+          <p class="text-muted text-base sm:text-lg leading-relaxed" data-i18n="about_p1">
+            «SHTAB TABAKA» — bu shunchaki qovurilgan tovuq emas, balki ko‘p yillik oshpazlik tajribasi, halollik mezoni va mehmondo‘stlik an’analarining uyg‘unligidir. Biz har kuni yangi so‘yilgan, veterinariya nazoratidan o‘tgan 100% halol tovuq go‘shtini maxsus marinadda tayyorlaymiz.
+          </p>
+
+          <p class="text-muted text-base sm:text-lg leading-relaxed" data-i18n="about_p2">
+            Bizning asosiy yo‘nalishimiz — xonadonlar uchun issiq tabaka yetkazib berish bilan birga, O‘zbekistondagi to‘ylar, aqiqa, ehson, nahor oshi va yubiley marosimlari uchun yuzlab porsiya tovuq taomlarini bir xil sifat va o‘z vaqtida tayyorlab berishdir.
+          </p>
+
+          <!-- Key Pillars List -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-burgundy/20">
+              <div class="w-9 h-9 rounded-lg bg-burgundy text-gold flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-charcoal text-sm sm:text-base" data-i18n="about_feat_1_t">Kunlik yangi go‘sht</h4>
+                <p class="text-xs text-muted mt-0.5" data-i18n="about_feat_1_d">Muzlatilgan emas, faqat yangi so‘yilgan mahalliy tovuqlar.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-burgundy/20">
+              <div class="w-9 h-9 rounded-lg bg-burgundy text-gold flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-charcoal text-sm sm:text-base" data-i18n="about_feat_2_t">Toza o‘simlik yog‘i</h4>
+                <p class="text-xs text-muted mt-0.5" data-i18n="about_feat_2_d">Yog‘ har bir partiyada muntazam yangilanadi va sifat nazoratidan o‘tadi.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-burgundy/20">
+              <div class="w-9 h-9 rounded-lg bg-burgundy text-gold flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-charcoal text-sm sm:text-base" data-i18n="about_feat_3_t">Marosimlar uchun ulgurji</h4>
+                <p class="text-xs text-muted mt-0.5" data-i18n="about_feat_3_d">Kuniga 500+ porsiyagacha to‘y va ehson buyurtmalarini qabul qilamiz.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-burgundy/20">
+              <div class="w-9 h-9 rounded-lg bg-burgundy text-gold flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <h4 class="font-extrabold text-charcoal text-sm sm:text-base" data-i18n="about_feat_4_t">Termo-qadoqlash</h4>
+                <p class="text-xs text-muted mt-0.5" data-i18n="about_feat_4_d">Maxsus alyumin va termo-qutilarda dasturxongacha issiq yetib boradi.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3 flex flex-wrap items-center gap-4">
+            <a href="#order-section" class="btn-solid-burgundy font-extrabold px-7 py-3.5 rounded-xl inline-flex items-center gap-2">
+              <i class="fa-solid fa-calendar-check text-gold"></i>
+              <span data-i18n="about_cta">Tadbir uchun buyurtma berish</span>
+            </a>
+            <a href="tel:+998999530505" class="font-extrabold text-burgundy hover:text-crimson inline-flex items-center gap-2 px-4 py-2">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span>+998 99 953 05 05</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. MENU SECTION (MENYU VA FILTRLASH)
+       ========================================================================== -->
+  <section id="menu" class="py-16 sm:py-24 bg-sand border-b-4 border-burgundy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 reveal">
+        <div class="inline-flex items-center gap-2 bg-burgundy text-gold px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest border-2 border-gold">
+          <i class="fa-solid fa-fire"></i>
+          <span data-i18n="menu_badge">Bizning Menyu</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal" data-i18n="menu_title">
+          SHTAB TABAKA Shohona Taomlari
+        </h2>
+        <p class="text-muted text-base sm:text-lg" data-i18n="menu_subtitle">
+          Har bir taom buyurtma asosida yangi qovuriladi va maxsus sous hamda yangi non yoki garnir bilan tortiq etiladi.
+        </p>
+      </div>
+
+      <!-- Category Filter Buttons -->
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 reveal" id="menu-filters">
+        <button type="button" onclick="filterMenu('all')" data-filter="all" class="menu-filter-btn px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider border-2 border-burgundy bg-burgundy text-gold shadow-solid-gold transition-all">
+          <span data-i18n="filter_all">Barchasi</span>
+        </button>
+        <button type="button" onclick="filterMenu('tabaka')" data-filter="tabaka" class="menu-filter-btn px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider border-2 border-burgundy bg-white text-charcoal hover:bg-burgundy hover:text-white transition-all">
+          <span data-i18n="filter_tabaka">Tovuq Tabaka</span>
+        </button>
+        <button type="button" onclick="filterMenu('legs')" data-filter="legs" class="menu-filter-btn px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider border-2 border-burgundy bg-white text-charcoal hover:bg-burgundy hover:text-white transition-all">
+          <span data-i18n="filter_legs">Oyoqchalar va Qanotlar</span>
+        </button>
+        <button type="button" onclick="filterMenu('sets')" data-filter="sets" class="menu-filter-btn px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider border-2 border-burgundy bg-white text-charcoal hover:bg-burgundy hover:text-white transition-all">
+          <span data-i18n="filter_sets">To‘y va Tadbir Setlari</span>
+        </button>
+        <button type="button" onclick="filterMenu('sides')" data-filter="sides" class="menu-filter-btn px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider border-2 border-burgundy bg-white text-charcoal hover:bg-burgundy hover:text-white transition-all">
+          <span data-i18n="filter_sides">Garnir va Souslar</span>
+        </button>
+      </div>
+
+      <!-- Menu Cards Grid (Populated via JS for seamless bilingual & filtering support) -->
+      <div id="menu-grid" class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Populated dynamically by renderMenu() -->
+      </div>
+
+      <!-- Bulk Order Banner inside Menu -->
+      <div class="mt-14 bg-burgundy text-white rounded-3xl p-6 sm:p-10 border-4 border-gold shadow-solid-dark flex flex-col lg:flex-row items-center justify-between gap-6 reveal">
+        <div class="space-y-2 text-center lg:text-left">
+          <span class="inline-block bg-gold text-charcoal font-extrabold text-xs uppercase px-3 py-1 rounded-md" data-i18n="menu_bulk_tag">
+            Maxsus taklif
+          </span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-extrabold text-white" data-i18n="menu_bulk_title">
+            To‘y, ehson yoki katta marosim rejalashtiryapsizmi?
+          </h3>
+          <p class="text-cream/90 text-sm sm:text-base max-w-2xl" data-i18n="menu_bulk_desc">
+            20 tadan ortiq butun tabaka yoki 10 kg dan ortiq tovuq oyoqlari buyurtmalariga maxsus ulgurji chegirma va bepul termo-qadoqlash taqdim etiladi!
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 shrink-0 w-full lg:w-auto">
+          <button type="button" onclick="openOrderModal('toy_set')" class="btn-solid-gold font-extrabold px-6 py-4 rounded-xl text-center">
+            <i class="fa-solid fa-calculator mr-2"></i>
+            <span data-i18n="menu_bulk_btn">Ulgurji buyurtma hisoblash</span>
+          </button>
+          <a href="tel:+998999530505" class="bg-crimsonDark hover:bg-crimson text-white border-2 border-gold font-extrabold px-6 py-4 rounded-xl text-center transition-colors">
+            <i class="fa-solid fa-phone mr-2 text-gold"></i>
+            <span>+998 99 953 05 05</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. SERVICES SECTION (XIZMATLAR: TO'Y, TADBIR VA MAROSIMLAR)
+       ========================================================================== -->
+  <section id="services" class="py-16 sm:py-24 bg-burgundy text-white border-b-8 border-gold">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 reveal">
+        <div class="inline-flex items-center gap-2 bg-crimsonDark text-gold px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest border-2 border-gold">
+          <i class="fa-solid fa-bell-concierge"></i>
+          <span data-i18n="services_badge">Xizmatlarimiz</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white" data-i18n="services_title">
+          To‘y, Tadbir va Marosimlar Uchun Maxsus Xizmat
+        </h2>
+        <p class="text-cream/85 text-base sm:text-lg" data-i18n="services_subtitle">
+          Mehmonlaringiz oldiga dasturxonga tortiladigan har bir porsiya tovuq tabaka bir xil chiroyli ko‘rinishda, qarsildoq va issiq holda yetkaziladi.
+        </p>
+      </div>
+
+      <!-- 4 Service Cards -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Service 1: Weddings -->
+        <div class="bg-crimsonDark border-2 border-gold rounded-3xl p-6 sm:p-8 shadow-solid-gold flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gold text-charcoal flex items-center justify-center text-2xl font-bold border-2 border-white">
+                <i class="fa-solid fa-champagne-glasses"></i>
+              </div>
+              <span class="bg-burgundy text-gold border border-gold px-3.5 py-1 rounded-full text-xs font-extrabold uppercase" data-i18n="srv_1_tag">
+                50 dan 1000 kishigacha
+              </span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3" data-i18n="srv_1_title">
+              To‘ylar va Tantanalar
+            </h3>
+            <p class="text-cream/85 text-sm sm:text-base leading-relaxed mb-6" data-i18n="srv_1_desc">
+              Nikoh to‘ylari, fotiha to‘ylari va katta bazmlar dasturxoni uchun saralangan, bir xil vazndagi qizargan butun tovuq tabakalar va bo‘laklangan assortilar. To‘yxona oshpazlari bilan kelishilgan vaqtda issiq yetkazib beramiz.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-gold/30 flex items-center justify-between">
+            <span class="text-xs sm:text-sm font-bold text-gold" data-i18n="srv_1_note">Maxsus ulgurji narxlar</span>
+            <button type="button" onclick="openOrderModal('toy_set')" class="bg-gold hover:bg-goldHover text-charcoal font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition-colors">
+              <span data-i18n="srv_btn">Buyurtma berish</span> <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Service 2: Ceremonies & Ehson -->
+        <div class="bg-crimsonDark border-2 border-gold rounded-3xl p-6 sm:p-8 shadow-solid-gold flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gold text-charcoal flex items-center justify-center text-2xl font-bold border-2 border-white">
+                <i class="fa-solid fa-hands-holding-circle"></i>
+              </div>
+              <span class="bg-burgundy text-gold border border-gold px-3.5 py-1 rounded-full text-xs font-extrabold uppercase" data-i18n="srv_2_tag">
+                100% Halol va Pokiza
+              </span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3" data-i18n="srv_2_title">
+              Marosim, Ehson va Aqiqalar
+            </h3>
+            <p class="text-cream/85 text-sm sm:text-base leading-relaxed mb-6" data-i18n="srv_2_desc">
+              Amru-ma’ruf, ehson, aqiqa, iftorlik va nahor oshlari uchun dasturxonlar soniga moslab bo‘laklangan yoki butun tabaka taomlari. Har bir porsiya halol talablar asosida, toza va barakali qilib tayyorlanadi.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-gold/30 flex items-center justify-between">
+            <span class="text-xs sm:text-sm font-bold text-gold" data-i18n="srv_2_note">Erta tongdan yetkazish imkoniyati</span>
+            <button type="button" onclick="openOrderModal('marosim_set')" class="bg-gold hover:bg-goldHover text-charcoal font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition-colors">
+              <span data-i18n="srv_btn">Buyurtma berish</span> <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Service 3: Family & Birthdays -->
+        <div class="bg-crimsonDark border-2 border-gold rounded-3xl p-6 sm:p-8 shadow-solid-gold flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gold text-charcoal flex items-center justify-center text-2xl font-bold border-2 border-white">
+                <i class="fa-solid fa-people-roof"></i>
+              </div>
+              <span class="bg-burgundy text-gold border border-gold px-3.5 py-1 rounded-full text-xs font-extrabold uppercase" data-i18n="srv_3_tag">
+                Oilaviy Setlar
+              </span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3" data-i18n="srv_3_title">
+              Tug‘ilgan Kun, Gap va Oilaviy Davralar
+            </h3>
+            <p class="text-cream/85 text-sm sm:text-base leading-relaxed mb-6" data-i18n="srv_3_desc">
+              Do‘stlar bilan "gap" yig‘inlari, tug‘ilgan kunlar va mehmon kutish uchun tayyor kombo setlar: qarsildoq tabaka, qanotchalar, jaydari kartoshka va maxsus pomidor-sarimsoq souslari bilan birga.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-gold/30 flex items-center justify-between">
+            <span class="text-xs sm:text-sm font-bold text-gold" data-i18n="srv_3_note">Tezkor yetkazib berish</span>
+            <button type="button" onclick="openOrderModal('oilaviy_set')" class="bg-gold hover:bg-goldHover text-charcoal font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition-colors">
+              <span data-i18n="srv_btn">Buyurtma berish</span> <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Service 4: Thermal Packaging & Corporate -->
+        <div class="bg-crimsonDark border-2 border-gold rounded-3xl p-6 sm:p-8 shadow-solid-gold flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gold text-charcoal flex items-center justify-center text-2xl font-bold border-2 border-white">
+                <i class="fa-solid fa-truck-fast"></i>
+              </div>
+              <span class="bg-burgundy text-gold border border-gold px-3.5 py-1 rounded-full text-xs font-extrabold uppercase" data-i18n="srv_4_tag">
+                Issiq Holda Yetkazish
+              </span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3" data-i18n="srv_4_title">
+              Maxsus Termo-Qutilarda Yetkazib Berish
+            </h3>
+            <p class="text-cream/85 text-sm sm:text-base leading-relaxed mb-6" data-i18n="srv_4_desc">
+              Buyurtmangiz sovib qolmasligi va qarsildoqligini yo‘qotmasligi uchun oziq-ovqat alyumin konteynerlari hamda maxsus issiqlik saqlovchi termo-qutilardan foydalanamiz. Toshkent bo‘ylab aniq vaqtda yetkaziladi.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-gold/30 flex items-center justify-between">
+            <span class="text-xs sm:text-sm font-bold text-gold" data-i18n="srv_4_note">2 ta filialdan tezkor jo‘natma</span>
+            <button type="button" onclick="openOrderModal()" class="bg-gold hover:bg-goldHover text-charcoal font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition-colors">
+              <span data-i18n="srv_btn">Buyurtma berish</span> <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. GALLERY SECTION WITH LIGHTBOX (GALEREYA)
+       ========================================================================== -->
+  <section id="gallery" class="py-16 sm:py-24 bg-cream border-b-4 border-burgundy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 reveal">
+        <div class="inline-flex items-center gap-2 bg-burgundy text-gold px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest border-2 border-gold">
+          <i class="fa-solid fa-camera-retro"></i>
+          <span data-i18n="gallery_badge">Foto Galereya</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal" data-i18n="gallery_title">
+          Haqiqiy Taomlarimiz va Jarayondan Lavhalar
+        </h2>
+        <p class="text-muted text-base sm:text-lg" data-i18n="gallery_subtitle">
+          Har bir suratda SHTAB TABAKA oshxonasida tayyorlangan qarsildoq tovuq taomlari aks etgan. Kattalashtirish uchun rasm ustiga bosing.
+        </p>
+      </div>
+
+      <!-- Gallery Grid (Populated via JS for Lightbox indexing & Bilingual Captions) -->
+      <div id="gallery-grid" class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Populated dynamically by renderGallery() -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. ADVANTAGES SECTION (AFZALLIKLAR)
+       ========================================================================== -->
+  <section id="advantages" class="py-16 sm:py-24 bg-sand border-b-4 border-burgundy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 reveal">
+        <div class="inline-flex items-center gap-2 bg-burgundy text-gold px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest border-2 border-gold">
+          <i class="fa-solid fa-star"></i>
+          <span data-i18n="adv_badge">Nega aynan biz?</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal" data-i18n="adv_title">
+          SHTAB TABAKA ni Tanlash Uchun 6 Asosiy Sabab
+        </h2>
+        <p class="text-muted text-base sm:text-lg" data-i18n="adv_subtitle">
+          Mijozlarimiz bizni doimiy sifat, halollik va katta marosimlarda hech qachon uyaltirmaydigan mas’uliyatimiz uchun tanlashadi.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <!-- Advantage 1 -->
+        <div class="bg-white border-2 border-burgundy rounded-2xl p-6 shadow-solid-burgundy reveal">
+          <div class="w-12 h-12 rounded-xl bg-burgundy text-gold flex items-center justify-center text-xl font-bold mb-4 border-2 border-gold">
+            01
+          </div>
+          <h3 class="font-serif text-xl font-bold text-charcoal mb-2" data-i18n="adv_1_t">
+            100% Halol va Yangi So‘yilgan Tovuq
+          </h3>
+          <p class="text-muted text-sm leading-relaxed" data-i18n="adv_1_d">
+            Biz faqat ishonchli halol parrandachilik xo‘jaliklaridan har kuni yangi keltiriladigan tovuqlardan foydalanamiz.
+          </p>
+        </div>
+
+        <!-- Advantage 2 -->
+        <div class="bg-white border-2 border-burgundy rounded-2xl p-6 shadow-solid-burgundy reveal">
+          <div class="w-12 h-12 rounded-xl bg-burgundy text-gold flex items-center justify-center text-xl font-bold mb-4 border-2 border-gold">
+            02
+          </div>
+          <h3 class="font-serif text-xl font-bold text-charcoal mb-2" data-i18n="adv_2_t">
+            Og‘ir Cho‘yan Press Texnologiyasi
+          </h3>
+          <p class="text-muted text-sm leading-relaxed" data-i18n="adv_2_d">
+            Maxsus og‘ir press ostida qovurilgan tovuqning barcha qismi bir tekis oltin rangda qizaradi, ichi esa suvli qoladi.
+          </p>
+        </div>
+
+        <!-- Advantage 3 -->
+        <div class="bg-white border-2 border-burgundy rounded-2xl p-6 shadow-solid-burgundy reveal">
+          <div class="w-12 h-12 rounded-xl bg-burgundy text-gold flex items-center justify-center text-xl font-bold mb-4 border-2 border-gold">
+            03
+          </div>
+          <h3 class="font-serif text-xl font-bold text-charcoal mb-2" data-i18n="adv_3_t">
+            Maxfiy Tabiiy Ziravorlar Marinadi
+          </h3>
+          <p class="text-muted text-sm leading-relaxed" data-i18n="adv_3_d">
+            Sarimsoq, kashnich urug‘i, shirin paprika va tog‘ o‘tlaridan iborat tabiiy marinad go‘shtning eng chuqur qatlamigacha singadi.
+          </p>
+        </div>
+
+        <!-- Advantage 4 -->
+        <div class="bg-white border-2 border-burgundy rounded-2xl p-6 shadow-solid-burgundy reveal">
+          <div class="w-12 h-12 rounded-xl bg-burgundy text-gold flex items-center justify-center text-xl font-bold mb-4 border-2 border-gold">
+            04
+          </div>
+          <h3 class="font-serif text-xl font-bold text-charcoal mb-2" data-i18n="adv_4_t">
+            Katta To‘ylar Uchun Katta Quvvat
+          </h3>
+          <p class="text-muted text-sm leading-relaxed" data-i18n="adv_4_d">
+            Bir vaqtning o‘zida o‘nlab qozon va presslarda ishlovchi professional jamoamiz 500+ porsiyani ham bir vaqtda issiq chiqaradi.
+          </p>
+        </div>
+
+        <!-- Advantage 5 -->
+        <div class="bg-white border-2 border-burgundy rounded-2xl p-6 shadow-solid-burgundy reveal">
+          <div class="w-12 h-12 rounded-xl bg-burgundy text-gold flex items-center justify-center text-xl font-bold mb-4 border-2 border-gold">
+            05
+          </div>
+          <h3 class="font-serif text-xl font-bold text-charcoal mb-2" data-i18n="adv_5_t">
+            Aniq Vaqt va Intizom („Shtab“ Standarti)
+          </h3>
+          <p class="text-muted text-sm leading-relaxed" data-i18n="adv_5_d">
+            To‘y va ehsonlarda har bir daqiqa muhimligini bilamiz. Buyurtmangiz kelishilgan soatdan kechikmasdan yetkaziladi.
+          </p>
+        </div>
+
+        <!-- Advantage 6 -->
+        <div class="bg-white border-2 border-burgundy rounded-2xl p-6 shadow-solid-burgundy reveal">
+          <div class="w-12 h-12 rounded-xl bg-burgundy text-gold flex items-center justify-center text-xl font-bold mb-4 border-2 border-gold">
+            06
+          </div>
+          <h3 class="font-serif text-xl font-bold text-charcoal mb-2" data-i18n="adv_6_t">
+            2 ta Qulay Filial va Hamyonbop Narx
+          </h3>
+          <p class="text-muted text-sm leading-relaxed" data-i18n="adv_6_d">
+            Shtab va Chilonzor filiallarimiz orqali shaharning istalgan nuqtasiga tez yetib boramiz. Ulgurji mijozlar uchun maxsus chegirmalar bor.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. FAQ SECTION (SAVOL-JAVOBLAR)
+       ========================================================================== -->
+  <section id="faq" class="py-16 sm:py-24 bg-cream border-b-4 border-burgundy">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-4 reveal">
+        <div class="inline-flex items-center gap-2 bg-burgundy text-gold px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest border-2 border-gold">
+          <i class="fa-solid fa-circle-question"></i>
+          <span data-i18n="faq_badge">Savol va Javoblar</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal" data-i18n="faq_title">
+          Ko‘p Beriladigan Savollar (FAQ)
+        </h2>
+        <p class="text-muted text-base sm:text-lg" data-i18n="faq_subtitle">
+          Buyurtma berish, to‘y va marosimlar uchun yetkazib berish shartlari haqida eng muhim ma’lumotlar.
+        </p>
+      </div>
+
+      <!-- Accordion Container -->
+      <div id="faq-container" class="mt-10 space-y-4">
+        <!-- Populated dynamically by renderFaq() -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. BRANCHES & ON-PAGE ORDER SYSTEM (FILIALLAR VA BUYURTMA BERISH)
+       ========================================================================== -->
+  <section id="branches" class="py-16 sm:py-24 bg-burgundy text-white border-b-8 border-gold">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 reveal">
+        <div class="inline-flex items-center gap-2 bg-crimsonDark text-gold px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest border-2 border-gold">
+          <i class="fa-solid fa-location-dot"></i>
+          <span data-i18n="branches_badge">Filiallar va Buyurtma</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white" data-i18n="branches_title">
+          Filiallarimiz bilan Bog‘laning yoki Onlayn Buyurtma Bering
+        </h2>
+        <p class="text-cream/85 text-base sm:text-lg" data-i18n="branches_subtitle">
+          O‘zingizga yaqin filialni tanlab qo‘ng‘iroq qiling yoki quyidagi buyurtma formasini to‘ldirib, to‘g‘ridan-to‘g‘ri filialning WhatsApp raqamiga yuboring.
+        </p>
+      </div>
+
+      <!-- Two Branches Cards -->
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 reveal">
+        
+        <!-- Branch 1: Shtab Filiali -->
+        <div class="bg-crimsonDark border-4 border-gold rounded-3xl p-6 sm:p-8 shadow-solid-dark flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-3 mb-5">
+              <span class="bg-gold text-charcoal font-extrabold text-xs uppercase px-3.5 py-1.5 rounded-lg border border-charcoal" data-i18n="branch_main_badge">
+                Asosiy Markaziy Filial
+              </span>
+              <span class="text-xs font-bold text-gold flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-gold inline-block"></span>
+                09:00 – 23:00
+              </span>
+            </div>
+
+            <h3 class="font-serif text-2xl sm:text-3xl font-extrabold text-white mb-2" data-i18n="branch_1_name">
+              SHTAB Filiali
+            </h3>
+            <p class="text-cream/85 text-sm sm:text-base mb-6" data-i18n="branch_1_address">
+              Toshkent sh., Shtab hududi. Yirik to‘y, marosim va olib ketish buyurtmalari markazi.
+            </p>
+
+            <!-- Big Clickable Phone Box -->
+            <a href="tel:+998999530505" class="block bg-burgundy hover:bg-crimson border-2 border-gold rounded-2xl p-4 sm:p-5 mb-6 transition-colors group">
+              <span class="block text-xs uppercase tracking-widest text-gold font-bold mb-1" data-i18n="click_to_call">
+                Qo‘ng‘iroq qilish uchun bosing:
+              </span>
+              <div class="flex items-center justify-between">
+                <span class="font-serif text-2xl sm:text-3xl font-extrabold text-white group-hover:text-gold transition-colors">
+                  +998 99 953 05 05
+                </span>
+                <span class="w-11 h-11 rounded-xl bg-gold text-charcoal flex items-center justify-center text-lg">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="tel:+998999530505" class="btn-solid-gold font-extrabold py-3.5 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-sm">
+              <i class="fa-solid fa-phone"></i>
+              <span data-i18n="btn_call_branch">Qo‘ng‘iroq qilish</span>
+            </a>
+            <a href="https://wa.me/998999530505" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-cream text-charcoal border-2 border-charcoal font-extrabold py-3.5 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-sm transition-colors">
+              <i class="fa-brands fa-whatsapp text-lg text-burgundy"></i>
+              <span>WhatsApp (Shtab)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Branch 2: Chilonzor Filiali -->
+        <div class="bg-crimsonDark border-4 border-gold rounded-3xl p-6 sm:p-8 shadow-solid-dark flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-3 mb-5">
+              <span class="bg-gold text-charcoal font-extrabold text-xs uppercase px-3.5 py-1.5 rounded-lg border border-charcoal" data-i18n="branch_2_badge">
+                Chilonzor Hududiy Filiali
+              </span>
+              <span class="text-xs font-bold text-gold flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-gold inline-block"></span>
+                09:00 – 23:00
+              </span>
+            </div>
+
+            <h3 class="font-serif text-2xl sm:text-3xl font-extrabold text-white mb-2" data-i18n="branch_2_name">
+              CHILONZOR Filiali
+            </h3>
+            <p class="text-cream/85 text-sm sm:text-base mb-6" data-i18n="branch_2_address">
+              Toshkent sh., Chilonzor tumani. Tezkor yetkazib berish, oilaviy va marosim buyurtmalari markazi.
+            </p>
+
+            <!-- Big Clickable Phone Box -->
+            <a href="tel:+998997530505" class="block bg-burgundy hover:bg-crimson border-2 border-gold rounded-2xl p-4 sm:p-5 mb-6 transition-colors group">
+              <span class="block text-xs uppercase tracking-widest text-gold font-bold mb-1" data-i18n="click_to_call">
+                Qo‘ng‘iroq qilish uchun bosing:
+              </span>
+              <div class="flex items-center justify-between">
+                <span class="font-serif text-2xl sm:text-3xl font-extrabold text-white group-hover:text-gold transition-colors">
+                  +998 99 753 05 05
+                </span>
+                <span class="w-11 h-11 rounded-xl bg-gold text-charcoal flex items-center justify-center text-lg">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="tel:+998997530505" class="btn-solid-gold font-extrabold py-3.5 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-sm">
+              <i class="fa-solid fa-phone"></i>
+              <span data-i18n="btn_call_branch">Qo‘ng‘iroq qilish</span>
+            </a>
+            <a href="https://wa.me/998997530505" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-cream text-charcoal border-2 border-charcoal font-extrabold py-3.5 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-sm transition-colors">
+              <i class="fa-brands fa-whatsapp text-lg text-burgundy"></i>
+              <span>WhatsApp (Chilonzor)</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ON-PAGE PROFESSIONAL ORDER FORM -->
+      <div id="order-section" class="mt-16 bg-cream text-charcoal rounded-3xl border-4 border-gold p-6 sm:p-10 lg:p-12 shadow-solid-dark reveal">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-8">
+            <span class="inline-block bg-burgundy text-gold font-extrabold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-gold mb-3" data-i18n="form_badge">
+              Onlayn Buyurtma Tizimi
+            </span>
+            <h3 class="font-serif text-2xl sm:text-4xl font-extrabold text-charcoal" data-i18n="form_title">
+              Buyurtmani Rasmiylashtirish
+            </h3>
+            <p class="text-muted text-sm sm:text-base mt-2" data-i18n="form_subtitle">
+              Ma’lumotlarni kiriting — buyurtmangiz tayyor xabar ko‘rinishida tanlangan filialning WhatsApp raqamiga yuboriladi.
+            </p>
+          </div>
+
+          <form id="page-order-form" onsubmit="handleOrderSubmit(event, 'page')" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Customer Name -->
+              <div>
+                <label for="page-name" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-2" data-i18n="lbl_name">
+                  Ismingiz *
+                </label>
+                <input
+                  type="text"
+                  id="page-name"
+                  required
+                  placeholder="Masalan: Sardorbek"
+                  data-i18n-placeholder="ph_name"
+                  class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-semibold text-charcoal"
+                />
+              </div>
+
+              <!-- Phone Number -->
+              <div>
+                <label for="page-phone" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-2" data-i18n="lbl_phone">
+                  Telefon raqamingiz *
+                </label>
+                <input
+                  type="tel"
+                  id="page-phone"
+                  required
+                  placeholder="+998 90 123 45 67"
+                  class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-semibold text-charcoal"
+                />
+              </div>
+
+              <!-- Dish Selection -->
+              <div>
+                <label for="page-dish" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-2" data-i18n="lbl_dish">
+                  Taom turini tanlang *
+                </label>
+                <select
+                  id="page-dish"
+                  onchange="updateCalculatedPrice('page')"
+                  class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-bold text-charcoal"
+                >
+                  <!-- Populated via JS -->
+                </select>
+              </div>
+
+              <!-- Quantity with Stepper & Bulk Quick Buttons -->
+              <div>
+                <label for="page-qty" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-2" data-i18n="lbl_qty">
+                  Miqdori (porsiya / kg / set) *
+                </label>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="adjustQty('page', -1)" class="w-12 h-12 rounded-xl bg-burgundy text-gold font-extrabold text-xl border-2 border-charcoal shrink-0 hover:bg-crimson">
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    id="page-qty"
+                    min="1"
+                    max="1000"
+                    value="2"
+                    oninput="updateCalculatedPrice('page')"
+                    required
+                    class="w-full h-12 text-center rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-extrabold text-lg text-charcoal"
+                  />
+                  <button type="button" onclick="adjustQty('page', 1)" class="w-12 h-12 rounded-xl bg-burgundy text-gold font-extrabold text-xl border-2 border-charcoal shrink-0 hover:bg-crimson">
+                    +
+                  </button>
+                  <button type="button" onclick="adjustQty('page', 10)" class="px-3 h-12 rounded-xl bg-gold text-charcoal font-extrabold text-xs border-2 border-charcoal shrink-0 hover:bg-goldHover">
+                    +10
+                  </button>
+                </div>
+              </div>
+
+              <!-- Branch Selector -->
+              <div>
+                <label for="page-branch" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-2" data-i18n="lbl_branch">
+                  Filialni tanlang *
+                </label>
+                <select
+                  id="page-branch"
+                  class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-bold text-charcoal"
+                >
+                  <option value="shtab" data-i18n="opt_branch_shtab">Shtab filiali (+998 99 953 05 05)</option>
+                  <option value="chilonzor" data-i18n="opt_branch_chilonzor">Chilonzor filiali (+998 99 753 05 05)</option>
+                </select>
+              </div>
+
+              <!-- Date & Time -->
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label for="page-date" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-2" data-i18n="lbl_date">
+                    Sana *
+                  </label>
+                  <input
+                    type="date"
+                    id="page-date"
+                    required
+                    class="w-full px-3 py-3.5 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-semibold text-charcoal text-sm"
+                  />
+                </div>
+                <div>
+                  <label for="page-time" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-2" data-i18n="lbl_time">
+                    Vaqt *
+                  </label>
+                  <input
+                    type="time"
+                    id="page-time"
+                    required
+                    value="18:00"
+                    class="w-full px-3 py-3.5 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-semibold text-charcoal text-sm"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Notes -->
+            <div>
+              <label for="page-notes" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-2" data-i18n="lbl_notes">
+                Qo‘shimcha izoh (Manzil, tadbir turi, bo‘laklash usuli)
+              </label>
+              <textarea
+                id="page-notes"
+                rows="3"
+                placeholder="Masalan: To'y marosimi uchun, 4 bo'lakka bo'lingan holda, achchiq sous ko'proq bo'lsin..."
+                data-i18n-placeholder="ph_notes"
+                class="w-full px-4 py-3 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-medium text-charcoal"
+              ></textarea>
+            </div>
+
+            <!-- Live Total Summary & Submit Bar -->
+            <div class="bg-sand border-2 border-burgundy rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <span class="block text-xs uppercase font-extrabold text-muted" data-i18n="lbl_estimated_total">Taxminiy hisob:</span>
+                <span id="page-total-price" class="font-serif text-2xl sm:text-3xl font-extrabold text-burgundy">136 000 UZS</span>
+              </div>
+              <button type="submit" class="w-full sm:w-auto btn-solid-burgundy font-extrabold text-base px-8 py-4 rounded-xl flex items-center justify-center gap-3">
+                <i class="fa-brands fa-whatsapp text-xl text-gold"></i>
+                <span data-i18n="btn_submit_whatsapp">WhatsApp orqali yuborish</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. FOOTER
+       ========================================================================== -->
+  <footer class="bg-charcoal text-white pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b-2 border-burgundy">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-gold text-charcoal flex items-center justify-center font-extrabold text-xl border-2 border-white">
+              <i class="fa-solid fa-crown text-burgundy"></i>
+            </div>
+            <div>
+              <span class="block font-serif font-extrabold text-2xl text-white leading-none">
+                SHTAB <span class="text-gold">TABAKA</span>
+              </span>
+              <span class="block text-[11px] uppercase tracking-widest text-gold font-bold mt-1" data-i18n="logo_subtitle">
+                Premium Tovuq Taomlari
+              </span>
+            </div>
+          </div>
+          <p class="text-cream/75 text-sm leading-relaxed" data-i18n="footer_desc">
+            Haqiqiy cho‘yan pressda qovurilgan 100% halol tovuq tabaka, tovuq oyoqlari va qanotlari. To‘ylar, oilaviy tadbirlar va marosimlar uchun ishonchli hamkoringiz.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://wa.me/998999530505" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-burgundy hover:bg-gold text-white hover:text-charcoal border border-gold flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+            <a href="#branches" aria-label="Telegram" class="w-10 h-10 rounded-xl bg-burgundy hover:bg-gold text-white hover:text-charcoal border border-gold flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-telegram text-lg"></i>
+            </a>
+            <a href="#gallery" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-burgundy hover:bg-gold text-white hover:text-charcoal border border-gold flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-instagram text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-serif text-lg font-bold text-gold uppercase tracking-wider" data-i18n="footer_nav_title">Bo‘limlar</h4>
+          <ul class="space-y-2 text-sm font-semibold text-cream/85">
+            <li><a href="#about" class="hover:text-gold transition-colors" data-i18n="nav_about">Biz haqimizda</a></li>
+            <li><a href="#menu" class="hover:text-gold transition-colors" data-i18n="nav_menu">Menyu</a></li>
+            <li><a href="#services" class="hover:text-gold transition-colors" data-i18n="nav_services">Xizmatlar</a></li>
+            <li><a href="#gallery" class="hover:text-gold transition-colors" data-i18n="nav_gallery">Galereya</a></li>
+            <li><a href="#advantages" class="hover:text-gold transition-colors" data-i18n="nav_advantages">Afzalliklar</a></li>
+            <li><a href="#faq" class="hover:text-gold transition-colors" data-i18n="nav_faq">Ko‘p beriladigan savollar</a></li>
+          </ul>
+        </div>
+
+        <!-- Branches & Phones -->
+        <div class="lg:col-span-5 space-y-4">
+          <h4 class="font-serif text-lg font-bold text-gold uppercase tracking-wider" data-i18n="footer_branches_title">Filiallar va Aloqa</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-burgundy/60 border border-gold/50 rounded-xl p-4">
+              <span class="block text-xs uppercase text-gold font-bold" data-i18n="branch_1_label">Shtab filiali</span>
+              <a href="tel:+998999530505" class="block text-base font-extrabold text-white hover:text-gold mt-1">
+                +998 99 953 05 05
+              </a>
+              <span class="block text-xs text-cream/70 mt-1" data-i18n="footer_hours">Har kuni: 09:00 – 23:00</span>
+            </div>
+            <div class="bg-burgundy/60 border border-gold/50 rounded-xl p-4">
+              <span class="block text-xs uppercase text-gold font-bold" data-i18n="branch_2_label">Chilonzor filiali</span>
+              <a href="tel:+998997530505" class="block text-base font-extrabold text-white hover:text-gold mt-1">
+                +998 99 753 05 05
+              </a>
+              <span class="block text-xs text-cream/70 mt-1" data-i18n="footer_hours">Har kuni: 09:00 – 23:00</span>
+            </div>
+          </div>
+          <button type="button" onclick="openOrderModal()" class="w-full btn-solid-gold font-extrabold py-3 rounded-xl text-sm flex items-center justify-center gap-2">
+            <i class="fa-solid fa-utensils"></i>
+            <span data-i18n="btn_order_now">Buyurtma berish</span>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/70">
+        <p>© 2026 <strong class="text-gold">SHTAB TABAKA</strong>. <span data-i18n="footer_rights">Barcha huquqlar himoyalangan.</span></p>
+        <p data-i18n="footer_tagline">100% Halol Tovuq Taomlari va Marosimlar Xizmati</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       ORDER MODAL WINDOW (BUYURTMA MODAL OYNASI)
+       ========================================================================== -->
+  <div id="order-modal" class="fixed inset-0 z-50 hidden bg-charcoal/80 flex items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true">
+    <div class="bg-cream text-charcoal w-full max-w-2xl rounded-3xl border-4 border-gold shadow-solid-dark overflow-hidden my-8">
+      
+      <!-- Modal Header -->
+      <div class="bg-burgundy text-white px-6 py-5 border-b-4 border-gold flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gold text-charcoal flex items-center justify-center font-extrabold">
+            <i class="fa-solid fa-fire-burner"></i>
+          </div>
+          <div>
+            <h3 class="font-serif text-xl sm:text-2xl font-extrabold text-white" data-i18n="modal_title">
+              Tezkor Buyurtma Berish
+            </h3>
+            <p class="text-xs text-gold font-semibold" data-i18n="modal_subtitle">
+              SHTAB TABAKA • WhatsApp orqali tasdiqlash
+            </p>
+          </div>
+        </div>
+        <button type="button" onclick="closeOrderModal()" class="w-10 h-10 rounded-xl bg-crimsonDark text-gold border border-gold hover:bg-gold hover:text-charcoal flex items-center justify-center text-lg transition-colors" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Form Body -->
+      <form id="modal-order-form" onsubmit="handleOrderSubmit(event, 'modal')" class="p-6 sm:p-8 space-y-5 max-h-[82vh] overflow-y-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="modal-name" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-1.5" data-i18n="lbl_name">
+              Ismingiz *
+            </label>
+            <input
+              type="text"
+              id="modal-name"
+              required
+              placeholder="Masalan: Sardorbek"
+              data-i18n-placeholder="ph_name"
+              class="w-full px-4 py-3 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-semibold text-sm"
+            />
+          </div>
+
+          <div>
+            <label for="modal-phone" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-1.5" data-i18n="lbl_phone">
+              Telefon raqamingiz *
+            </label>
+            <input
+              type="tel"
+              id="modal-phone"
+              required
+              placeholder="+998 90 123 45 67"
+              class="w-full px-4 py-3 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-semibold text-sm"
+            />
+          </div>
+
+          <div>
+            <label for="modal-dish" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-1.5" data-i18n="lbl_dish">
+              Taom turini tanlang *
+            </label>
+            <select
+              id="modal-dish"
+              onchange="updateCalculatedPrice('modal')"
+              class="w-full px-3.5 py-3 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-bold text-sm"
+            >
+              <!-- Populated via JS -->
+            </select>
+          </div>
+
+          <div>
+            <label for="modal-qty" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-1.5" data-i18n="lbl_qty">
+              Miqdori *
+            </label>
+            <div class="flex items-center gap-1.5">
+              <button type="button" onclick="adjustQty('modal', -1)" class="w-10 h-11 rounded-xl bg-burgundy text-gold font-extrabold text-lg border border-charcoal shrink-0">
+                -
+              </button>
+              <input
+                type="number"
+                id="modal-qty"
+                min="1"
+                max="1000"
+                value="1"
+                oninput="updateCalculatedPrice('modal')"
+                required
+                class="w-full h-11 text-center rounded-xl bg-white border-2 border-burgundy/40 font-extrabold text-base"
+              />
+              <button type="button" onclick="adjustQty('modal', 1)" class="w-10 h-11 rounded-xl bg-burgundy text-gold font-extrabold text-lg border border-charcoal shrink-0">
+                +
+              </button>
+              <button type="button" onclick="adjustQty('modal', 10)" class="px-2.5 h-11 rounded-xl bg-gold text-charcoal font-extrabold text-xs border border-charcoal shrink-0">
+                +10
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label for="modal-branch" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-1.5" data-i18n="lbl_branch">
+              Filialni tanlang *
+            </label>
+            <select
+              id="modal-branch"
+              class="w-full px-3.5 py-3 rounded-xl bg-white border-2 border-burgundy/40 focus:border-burgundy focus:outline-none font-bold text-sm"
+            >
+              <option value="shtab" data-i18n="opt_branch_shtab">Shtab filiali (+998 99 953 05 05)</option>
+              <option value="chilonzor" data-i18n="opt_branch_chilonzor">Chilonzor filiali (+998 99 753 05 05)</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label for="modal-date" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-1.5" data-i18n="lbl_date">
+                Sana *
+              </label>
+              <input
+                type="date"
+                id="modal-date"
+                required
+                class="w-full px-2.5 py-3 rounded-xl bg-white border-2 border-burgundy/40 font-semibold text-xs"
+              />
+            </div>
+            <div>
+              <label for="modal-time" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-1.5" data-i18n="lbl_time">
+                Vaqt *
+              </label>
+              <input
+                type="time"
+                id="modal-time"
+                required
+                value="19:00"
+                class="w-full px-2.5 py-3 rounded-xl bg-white border-2 border-burgundy/40 font-semibold text-xs"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label for="modal-notes" class="block text-xs font-extrabold uppercase tracking-wider text-charcoal mb-1.5" data-i18n="lbl_notes">
+            Qo‘shimcha izoh
+          </label>
+          <textarea
+            id="modal-notes"
+            rows="2"
+            placeholder="Manzil yoki tadbir haqida ma'lumot..."
+            data-i18n-placeholder="ph_notes"
+            class="w-full px-4 py-2.5 rounded-xl bg-white border-2 border-burgundy/40 font-medium text-sm"
+          ></textarea>
+        </div>
+
+        <div class="bg-sand border-2 border-burgundy rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <span class="block text-xs uppercase font-extrabold text-muted" data-i18n="lbl_estimated_total">Taxminiy hisob:</span>
+            <span id="modal-total-price" class="font-serif text-2xl font-extrabold text-burgundy">68 000 UZS</span>
+          </div>
+          <button type="submit" class="w-full sm:w-auto btn-solid-burgundy font-extrabold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg text-gold"></i>
+            <span data-i18n="btn_submit_whatsapp">WhatsApp orqali yuborish</span>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       LIGHTBOX MODAL FOR GALLERY
+       ========================================================================== -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-charcoal/95 flex items-center justify-center p-4" role="dialog" aria-modal="true">
+    <button type="button" onclick="closeLightbox()" class="absolute top-5 right-5 w-12 h-12 rounded-xl bg-burgundy text-gold border-2 border-gold flex items-center justify-center text-xl hover:bg-crimson z-10" aria-label="Close Lightbox">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <button type="button" onclick="navigateLightbox(-1)" class="absolute left-3 sm:left-6 w-12 h-12 rounded-xl bg-burgundy text-gold border-2 border-gold flex items-center justify-center text-xl hover:bg-crimson z-10" aria-label="Previous Image">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="max-w-4xl w-full bg-crimsonDark border-4 border-gold rounded-3xl overflow-hidden shadow-solid-dark">
+      <div class="aspect-[16/10] bg-charcoal overflow-hidden">
+        <img id="lightbox-img" src="" alt="Gallery Preview" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4 sm:p-5 bg-burgundy text-white border-t-2 border-gold flex items-center justify-between gap-4">
+        <div>
+          <span id="lightbox-counter" class="text-xs font-extrabold uppercase tracking-widest text-gold">1 / 6</span>
+          <h4 id="lightbox-caption" class="font-serif text-lg sm:text-xl font-bold text-white mt-0.5"></h4>
+        </div>
+        <button type="button" onclick="closeLightbox(); openOrderModal();" class="btn-solid-gold text-xs sm:text-sm font-extrabold px-4 py-2.5 rounded-xl shrink-0">
+          <span data-i18n="btn_order_now">Buyurtma berish</span>
+        </button>
+      </div>
+    </div>
+
+    <button type="button" onclick="navigateLightbox(1)" class="absolute right-3 sm:right-6 w-12 h-12 rounded-xl bg-burgundy text-gold border-2 border-gold flex items-center justify-center text-xl hover:bg-crimson z-10" aria-label="Next Image">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       ORDER CONFIRMATION TOAST / MESSAGE BOX (NO ALERT())
+       ========================================================================== -->
+  <div id="order-toast" class="fixed bottom-5 right-5 z-50 hidden max-w-md w-full bg-burgundy text-white border-4 border-gold rounded-2xl p-5 shadow-solid-dark">
+    <div class="flex items-start justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gold text-charcoal flex items-center justify-center font-extrabold text-lg shrink-0">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div>
+          <h4 class="font-serif font-extrabold text-base text-gold" data-i18n="toast_title">Buyurtma tayyorlandi!</h4>
+          <p id="toast-branch-info" class="text-xs text-cream/90 mt-0.5"></p>
+        </div>
+      </div>
+      <button type="button" onclick="hideOrderToast()" class="text-gold hover:text-white">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <pre id="toast-preview-text" class="mt-3 p-3 rounded-xl bg-crimsonDark border border-gold/40 text-xs text-cream whitespace-pre-wrap font-sans max-h-36 overflow-y-auto"></pre>
+    <div class="mt-3 flex items-center gap-2">
+      <a id="toast-wa-link" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 btn-solid-gold text-xs font-extrabold py-2.5 px-3 rounded-lg text-center">
+        <i class="fa-brands fa-whatsapp mr-1"></i> <span data-i18n="toast_open_wa">WhatsApp-ni ochish</span>
+      </a>
+      <button type="button" onclick="copyOrderText()" class="bg-crimsonDark hover:bg-crimson text-white border border-gold text-xs font-bold py-2.5 px-3 rounded-lg">
+        <i class="fa-regular fa-copy mr-1"></i> <span id="copy-btn-label" data-i18n="toast_copy">Nusxalash</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: BILINGUAL DATA, MENU FILTER, LIGHTBOX, WHATSAPP ORDER SYSTEM
+       ========================================================================== -->
+  <script>
+    // Current Active Language ('uz' or 'ru')
+    let currentLang = 'uz';
+    let currentCategory = 'all';
+    let currentLightboxIndex = 0;
+
+    // --------------------------------------------------------------------------
+    // 1. MENU ITEMS DATA (9 UNIQUE REAL CHICKEN DISHES & EVENT SETS)
+    // --------------------------------------------------------------------------
+    const menuItems = [
+      {
+        id: 'klassik_tabaka',
+        category: 'tabaka',
+        price: 68000,
+        weight: { uz: '750–850 gr (Butun)', ru: '750–850 гр (Целая)' },
+        badge: { uz: 'Xit Taom #1', ru: 'Хит продаж #1' },
+        title: { uz: 'Klassik Shtab Tabaka', ru: 'Классическая Штаб Табака' },
+        desc: {
+          uz: 'Maxsus og‘ir cho‘yan press ostida oltin rangga kirguncha qovurilgan butun tovuq. Ustki qismi qarsildoq, ichi sersuv, sarimsoqli sous bilan tortiladi.',
+          ru: 'Целая курица, обжаренная под тяжелым чугунным прессом до золотистой хрустящей корочки. Подается с фирменным чесночным соусом.'
+        },
+        image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'achchiq_tabaka',
+        category: 'tabaka',
+        price: 72000,
+        weight: { uz: '800–900 gr (Butun)', ru: '800–900 гр (Целая)' },
+        badge: { uz: 'Achchiq va Xushbo‘y', ru: 'Острая и пряная' },
+        title: { uz: 'Kavkazcha Achchiq Tabaka', ru: 'Кавказская Острая Табака' },
+        desc: {
+          uz: 'Qizil chili qalampiri, tog‘ kashnichi va yangi sarimsoq marinadida tayyorlangan, ishtahani ochuvchi achchiqqina tovuq tabaka.',
+          ru: 'Пикантная табака в маринаде из красного перца чили, горного кориандра и свежего чеснока с насыщенным ароматом.'
+        },
+        image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'sarimsoqli_tabaka',
+        category: 'tabaka',
+        price: 74000,
+        weight: { uz: '850 gr + Garnir', ru: '850 гр + Гарнир' },
+        badge: { uz: 'Oshpaz tavsiyasi', ru: 'Выбор шефа' },
+        title: { uz: 'Sarimsoq va Ko‘katli Tabaka', ru: 'Табака с чесноком и зеленью' },
+        desc: {
+          uz: 'Sariyog‘ va yangi siqilgan sarimsoq sousi bilan boyitilgan, ustiga yangi ko‘katlar sepilgan yumshoq tovuq tabaka.',
+          ru: 'Нежная курица табака, пропитанная сливочно-чесночным соусом и украшенная свежей зеленью прямо с жаровни.'
+        },
+        image: 'https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'tovuq_oyoqlari',
+        category: 'legs',
+        price: 58000,
+        weight: { uz: '1 kg (8–10 dona)', ru: '1 кг (8–10 шт)' },
+        badge: { uz: 'Marosimlar uchun', ru: 'Для мероприятий' },
+        title: { uz: 'Qarsildoq Tovuq Oyoqlari (Golen)', ru: 'Хрустящие Куриные Голени' },
+        desc: {
+          uz: 'Maxsus ziravorlarda marinadlanib, qizarib pishirilgan sersuv tovuq oyoqchalari. Dasturxonga tortish va mehmonlar uchun juda qulay.',
+          ru: 'Сочные куриные голени в фирменном маринаде с румяной корочкой. Идеальный выбор для праздничного стола и банкетов.'
+        },
+        image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'oltin_qanotlar',
+        category: 'legs',
+        price: 55000,
+        weight: { uz: '1 kg (12–14 dona)', ru: '1 кг (12–14 шт)' },
+        badge: { uz: 'Sevimli gazak', ru: 'Любимая закуска' },
+        title: { uz: 'Oltin Tovuq Qanotchalari', ru: 'Золотистые Куриные Крылышки' },
+        desc: {
+          uz: 'Paprika va asal-xantal ziravorlari bilan qarsildoq qilib qovurilgan ishtahaochar tovuq qanotlari.',
+          ru: 'Аппетитные куриные крылышки, обжаренные до хрустящей корочки со сладкой паприкой и специями.'
+        },
+        image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'son_filesi',
+        category: 'legs',
+        price: 62000,
+        weight: { uz: '1 kg (Bo‘laklangan)', ru: '1 кг (Порционные)' },
+        badge: { uz: 'Yumshoq va Sersuv', ru: 'Сочное мясо' },
+        title: { uz: 'Marinadlangan Tovuq Sonlari', ru: 'Запеченные Куриные Бедра' },
+        desc: {
+          uz: 'Katta dasturxonlar va ehsonlar uchun bir xil o‘lchamda kesilib qovurilgan tovuq son qismlari.',
+          ru: 'Отборные куриные бедра одинакового размера, обжаренные со специями специально для больших застолий.'
+        },
+        image: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'toy_set',
+        category: 'sets',
+        price: 640000,
+        weight: { uz: '10 ta butun Tabaka + Souslar', ru: '10 целых Табака + Соусы' },
+        badge: { uz: 'To‘y va Ehson Seti', ru: 'Свадебный Сет' },
+        title: { uz: '«To‘y va Marosim» Ulgurji Seti (10x)', ru: 'Сет «Свадьба и Торжество» (10x)' },
+        desc: {
+          uz: '10 ta saralangan butun Shtab Tabaka (yoki 40 bo‘lakka bo‘lingan), 10 porsiya maxsus tomat-sarimsoq sousi va termo-qutilarda yetkazish.',
+          ru: '10 отборных кур Табака (целиком или разделенных на 40 порций), 10 фирменных соусов и упаковка в термо-боксы.'
+        },
+        image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'oilaviy_set',
+        category: 'sets',
+        price: 215000,
+        weight: { uz: '6–8 kishilik (3.2 kg)', ru: 'На 6–8 персон (3.2 кг)' },
+        badge: { uz: 'Oilaviy Kombo', ru: 'Семейное Комбо' },
+        title: { uz: '«Shtab Oilaviy» Katta Seti', ru: 'Большой Сет «Штаб Семейный»' },
+        desc: {
+          uz: '2 ta butun Shtab Tabaka, 1 kg qarsildoq qanot va oyoqchalar, 2 porsiya jaydari kartoshka va 4 xil maxsus sous.',
+          ru: '2 целые Штаб Табака, 1 кг хрустящих крылышек и голеней, 2 порции картофеля по-деревенски и 4 фирменных соуса.'
+        },
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 'garnir_sous',
+        category: 'sides',
+        price: 24000,
+        weight: { uz: '450 gr + 2 ta Sous', ru: '450 гр + 2 Соуса' },
+        badge: { uz: 'Issiq Garnir', ru: 'Горячий гарнир' },
+        title: { uz: 'Jaydari Kartoshka va Maxsus Souslar', ru: 'Картофель по-деревенски и Соусы' },
+        desc: {
+          uz: 'Ziravorlar bilan qizarib pishgan oltinrang kartoshka bo‘laklari hamda Shtab maxsus tomat-sarimsoq va oq sousi.',
+          ru: 'Золотистые дольки картофеля со специями в комплекте с фирменным томатно-чесночным и сливочным соусами.'
+        },
+        image: 'https://images.unsplash.com/photo-1518013431117-eb1465fa5752?auto=format&fit=crop&w=800&q=80'
+      }
+    ];
+
+    // --------------------------------------------------------------------------
+    // 2. GALLERY DATA (6 REAL PHOTOS WITH BILINGUAL CAPTIONS)
+    // --------------------------------------------------------------------------
+    const galleryItems = [
+      {
+        src: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=1200&q=85',
+        tag: { uz: 'Asosiy Taom', ru: 'Фирменное блюдо' },
+        caption: { uz: 'Cho‘yan pressda qizarib pishgan Klassik Shtab Tabaka', ru: 'Классическая Штаб Табака с золотистой корочкой' }
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=1200&q=85',
+        tag: { uz: 'Oyoqchalar', ru: 'Куриные голени' },
+        caption: { uz: 'To‘y va marosim dasturxonlari uchun qarsildoq tovuq oyoqlari', ru: 'Хрустящие куриные голени для праздничных столов' }
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=85',
+        tag: { uz: 'Tadbir va Banket', ru: 'Банкеты и Свадьбы' },
+        caption: { uz: 'Katta to‘y va oilaviy marosimlar uchun ulgurji buyurtmalar tayyorlash', ru: 'Приготовление оптовых заказов для свадеб и мероприятий' }
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1200&q=85',
+        tag: { uz: 'Maxsus Marinad', ru: 'Особый маринад' },
+        caption: { uz: 'Tabiiy sarimsoq va ziravorlar bilan boyitilgan sersuv tovuq go‘shti', ru: 'Сочное мясо в маринаде из свежего чеснока и горных специй' }
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=1200&q=85',
+        tag: { uz: 'Qanotchalar', ru: 'Крылышки' },
+        caption: { uz: 'Oltinrang qovurilgan qanotchalar maxsus tomat sousi bilan', ru: 'Золотистые куриные крылышки с фирменным томатным соусом' }
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85',
+        tag: { uz: 'Oilaviy Dasturxon', ru: 'Семейный стол' },
+        caption: { uz: 'Oilaviy davralar va mehmon kutish uchun to‘kin Shtab Setlari', ru: 'Изобильные сеты для семейных ужинов и встреч с друзьями' }
+      }
+    ];
+
+    // --------------------------------------------------------------------------
+    // 3. FAQ DATA (6 QUESTIONS IN UZ & RU)
+    // --------------------------------------------------------------------------
+    const faqItems = [
+      {
+        q: {
+          uz: 'To‘y, ehson va katta marosimlar uchun necha kun oldin buyurtma berish kerak?',
+          ru: 'За сколько дней нужно оформлять заказ на свадьбу или крупное мероприятие?'
+        },
+        a: {
+          uz: '50 porsiyadan ortiq katta to‘y, aqiqa va ehson buyurtmalarini kamida 1–3 kun oldin berishingizni tavsiya qilamiz. Shunda sizning tadbiringiz uchun alohida yangi tovuq partiyasi marinadlanib, aniq belgilangan daqiqada issiq chiqariladi.',
+          ru: 'Крупные заказы от 50 порций для свадеб и мероприятий рекомендуем оформлять за 1–3 дня. Это позволяет заранее подготовить свежую партию птицы и доставить заказ точно к назначенному часу.'
+        }
+      },
+      {
+        q: {
+          uz: 'Tovuq go‘shti 100% Halolmi?',
+          ru: 'Является ли куриное мясо 100% Халяль?'
+        },
+        a: {
+          uz: 'Albatta! SHTAB TABAKA oshxonasida faqat O‘zbekistondagi sertifikatlangan, islomiy qoidalar asosida so‘yilgan 100% Halol va yangi (muzlatilmagan) mahalliy tovuq go‘shtidan foydalaniladi.',
+          ru: 'Безусловно! В SHTAB TABAKA используется исключительно сертифицированное 100% Халяль охлажденное (не замороженное) мясо птицы от проверенных местных хозяйств.'
+        }
+      },
+      {
+        q: {
+          uz: 'Marosim dasturxonlari uchun tabakani bo‘laklab (kesib) berasizlarmi?',
+          ru: 'Можно ли нарезать табака на порционные куски для банкетных столов?'
+        },
+        a: {
+          uz: 'Ha, mijoz xohishiga ko‘ra butun holda yoki dasturxonga tortishga qulay qilib 2, 4 yoki 6 bo‘lakka chiroyli qilib kesib, har bir konteynerga souslari bilan joylab beramiz.',
+          ru: 'Да, по вашему желанию мы отправляем табака целиком либо аккуратно разделываем каждую курицу на 2, 4 или 6 порционных кусков для удобной подачи на столы.'
+        }
+      },
+      {
+        q: {
+          uz: 'Taomlar yetib borguncha sovib qolmaydimi?',
+          ru: 'Не остынет ли заказ во время доставки?'
+        },
+        a: {
+          uz: 'Yo‘q, biz barcha buyurtmalarni qalin oziq-ovqat folgasi, maxsus alyumin konteynerlar va issiqlikni 2 soatgacha saqlovchi termo-qutilarda yetkazib beramiz. Dasturxonga xuddi qozondan chiqqandek issiq holda tortiladi.',
+          ru: 'Нет, мы упаковываем блюда в плотные алюминиевые контейнеры и перевозим в профессиональных термо-боксах, сохраняющих жар и хрустящую корочку до 2 часов.'
+        }
+      },
+      {
+        q: {
+          uz: 'Ulgurji buyurtmalar uchun chegirmalar bormi?',
+          ru: 'Предусмотрены ли скидки при оптовых заказах?'
+        },
+        a: {
+          uz: 'Ha! To‘y, ehson va yirik tadbirlar uchun 20 tadan ortiq tabaka yoki 15 kg dan ortiq tovuq oyoqlari buyurtma qilinganda maxsus ulgurji narxlar va bepul souslar to‘plami taqdim etiladi.',
+          ru: 'Да! При заказе от 20 целых табака или от 15 кг куриных голеней/крылышек действуют специальные оптовые цены и бесплатные наборы фирменных соусов.'
+        }
+      },
+      {
+        q: {
+          uz: 'Qaysi filiallaringiz bor va to‘lov turlari qanday?',
+          ru: 'Какие филиалы работают и какие способы оплаты доступны?'
+        },
+        a: {
+          uz: 'Bizning Shtab filiali (+998 99 953 05 05) va Chilonzor filiali (+998 99 753 05 05) har kuni soat 09:00 dan 23:00 gacha ishlaydi. To‘lovlarni naqd pul, Click, Payme yoki karta o‘tkazmasi orqali amalga oshirishingiz mumkin.',
+          ru: 'Для вас ежедневно с 09:00 до 23:00 работают филиал Штаб (+998 99 953 05 05) и филиал Чиланзар (+998 99 753 05 05). Оплата принимается наличными, через Click, Payme или переводом на карту.'
+        }
+      }
+    ];
+
+    // --------------------------------------------------------------------------
+    // 4. STATIC UI DICTIONARY (UZ & RU)
+    // --------------------------------------------------------------------------
+    const translations = {
+      uz: {
+        topbar_text: "To‘y, marosim va ehsonlar uchun 100% Halol tovuq tabaka buyurtmalari!",
+        branch_shtab_short: "Shtab:",
+        branch_chilonzor_short: "Chilonzor:",
+        logo_subtitle: "Premium Tovuq Taomlari",
+        nav_about: "Biz haqimizda",
+        nav_menu: "Menyu",
+        nav_services: "Xizmatlar",
+        nav_gallery: "Galereya",
+        nav_advantages: "Afzalliklar",
+        nav_faq: "FAQ",
+        nav_branches: "Filiallar",
+        btn_order_now: "Buyurtma berish",
+        hero_badge: "100% Halol • Maxsus Pressda Qovurilgan",
+        hero_title_1: "Haqiqiy Qarsildoq",
+        hero_title_2: "SHTAB TABAKA",
+        hero_title_3: "To‘y, Tadbir va Dasturxonlar Ko‘rki!",
+        hero_desc: "Maxsus og‘ir cho‘yan press ostida qizarib pishgan, sersuv va xushbo‘y ziravorli tovuq tabaka hamda tovuq oyoqlari. Oilaviy kechki ovqatdan tortib, 500 kishilik katta to‘y va marosimlargacha issiq holda yetkazib beramiz.",
+        hero_cta_order: "Hoziroq buyurtma berish",
+        hero_cta_menu: "Menyuni ko‘rish",
+        branch_1_label: "Shtab filiali",
+        branch_2_label: "Chilonzor filiali",
+        hero_img_badge: "Bestseller #1",
+        hero_card_sub: "Maxsus retsept asosida",
+        hero_card_title: "Klassik Shtab Tabaka (Butun)",
+        hero_card_weight: "750–850 gr",
+        stat_1: "Yillik tajriba va an’ana",
+        stat_2: "O‘tkazilgan to‘y va marosimlar",
+        stat_3: "Halol va yangi mahsulot",
+        stat_4: "Toshkent bo‘ylab faol filial",
+        about_card_1_title: "Og‘ir cho‘yan press",
+        about_card_1_desc: "Tovuq usti qarsildoq, ichi esa yumshoq va sersuv bo‘lishini ta’minlaydi.",
+        about_card_2_title: "Saralangan ziravorlar",
+        about_card_2_desc: "Sun’iy qo‘shimchalarsiz, tabiiy sarimsoq va tog‘ ziravorlari marinadi.",
+        about_badge: "Biz haqimizda",
+        about_title: "SHTAB TABAKA — Mazali Ta’m va To‘kin Dasturxon Garantiyasi",
+        about_p1: "«SHTAB TABAKA» — bu shunchaki qovurilgan tovuq emas, balki ko‘p yillik oshpazlik tajribasi, halollik mezoni va mehmondo‘stlik an’analarining uyg‘unligidir. Biz har kuni yangi so‘yilgan, veterinariya nazoratidan o‘tgan 100% halol tovuq go‘shtini maxsus marinadda tayyorlaymiz.",
+        about_p2: "Bizning asosiy yo‘nalishimiz — xonadonlar uchun issiq tabaka yetkazib berish bilan birga, O‘zbekistondagi to‘ylar, aqiqa, ehson, nahor oshi va yubiley marosimlari uchun yuzlab porsiya tovuq taomlarini bir xil sifat va o‘z vaqtida tayyorlab berishdir.",
+        about_feat_1_t: "Kunlik yangi go‘sht",
+        about_feat_1_d: "Muzlatilgan emas, faqat yangi so‘yilgan mahalliy tovuqlar.",
+        about_feat_2_t: "Toza o‘simlik yog‘i",
+        about_feat_2_d: "Yog‘ har bir partiyada muntazam yangilanadi va sifat nazoratidan o‘tadi.",
+        about_feat_3_t: "Marosimlar uchun ulgurji",
+        about_feat_3_d: "Kuniga 500+ porsiyagacha to‘y va ehson buyurtmalarini qabul qilamiz.",
+        about_feat_4_t: "Termo-qadoqlash",
+        about_feat_4_d: "Maxsus alyumin va termo-qutilarda dasturxongacha issiq yetib boradi.",
+        about_cta: "Tadbir uchun buyurtma berish",
+        menu_badge: "Bizning Menyu",
+        menu_title: "SHTAB TABAKA Shohona Taomlari",
+        menu_subtitle: "Har bir taom buyurtma asosida yangi qovuriladi va maxsus sous bilan tortiq etiladi.",
+        filter_all: "Barchasi",
+        filter_tabaka: "Tovuq Tabaka",
+        filter_legs: "Oyoqchalar va Qanotlar",
+        filter_sets: "To‘y va Tadbir Setlari",
+        filter_sides: "Garnir va Souslar",
+        menu_bulk_tag: "Maxsus taklif",
+        menu_bulk_title: "To‘y, ehson yoki katta marosim rejalashtiryapsizmi?",
+        menu_bulk_desc: "20 tadan ortiq butun tabaka yoki 10 kg dan ortiq tovuq oyoqlari buyurtmalariga maxsus ulgurji chegirma va bepul termo-qadoqlash taqdim etiladi!",
+        menu_bulk_btn: "Ulgurji buyurtma hisoblash",
+        services_badge: "Xizmatlarimiz",
+        services_title: "To‘y, Tadbir va Marosimlar Uchun Maxsus Xizmat",
+        services_subtitle: "Mehmonlaringiz oldiga dasturxonga tortiladigan har bir porsiya tovuq tabaka bir xil chiroyli ko‘rinishda, qarsildoq va issiq holda yetkaziladi.",
+        srv_1_tag: "50 dan 1000 kishigacha",
+        srv_1_title: "To‘ylar va Tantanalar",
+        srv_1_desc: "Nikoh to‘ylari, fotiha to‘ylari va katta bazmlar dasturxoni uchun saralangan, bir xil vazndagi qizargan butun tovuq tabakalar va bo‘laklangan assortilar. To‘yxona oshpazlari bilan kelishilgan vaqtda issiq yetkazib beramiz.",
+        srv_1_note: "Maxsus ulgurji narxlar",
+        srv_2_tag: "100% Halol va Pokiza",
+        srv_2_title: "Marosim, Ehson va Aqiqalar",
+        srv_2_desc: "Amru-ma’ruf, ehson, aqiqa, iftorlik va nahor oshlari uchun dasturxonlar soniga moslab bo‘laklangan yoki butun tabaka taomlari. Har bir porsiya halol talablar asosida, toza va barakali qilib tayyorlanadi.",
+        srv_2_note: "Erta tongdan yetkazish imkoniyati",
+        srv_3_tag: "Oilaviy Setlar",
+        srv_3_title: "Tug‘ilgan Kun, Gap va Oilaviy Davralar",
+        srv_3_desc: "Do‘stlar bilan «gap» yig‘inlari, tug‘ilgan kunlar va mehmon kutish uchun tayyor kombo setlar: qarsildoq tabaka, qanotchalar, jaydari kartoshka va maxsus pomidor-sarimsoq souslari bilan birga.",
+        srv_3_note: "Tezkor yetkazib berish",
+        srv_4_tag: "Issiq Holda Yetkazish",
+        srv_4_title: "Maxsus Termo-Qutilarda Yetkazib Berish",
+        srv_4_desc: "Buyurtmangiz sovib qolmasligi va qarsildoqligini yo‘qotmasligi uchun oziq-ovqat alyumin konteynerlari hamda maxsus issiqlik saqlovchi termo-qutilardan foydalanamiz. Toshkent bo‘ylab aniq vaqtda yetkaziladi.",
+        srv_4_note: "2 ta filialdan tezkor jo‘natma",
+        srv_btn: "Buyurtma berish",
+        gallery_badge: "Foto Galereya",
+        gallery_title: "Haqiqiy Taomlarimiz va Jarayondan Lavhalar",
+        gallery_subtitle: "Har bir suratda SHTAB TABAKA oshxonasida tayyorlangan qarsildoq tovuq taomlari aks etgan. Kattalashtirish uchun rasm ustiga bosing.",
+        adv_badge: "Nega aynan biz?",
+        adv_title: "SHTAB TABAKA ni Tanlash Uchun 6 Asosiy Sabab",
+        adv_subtitle: "Mijozlarimiz bizni doimiy sifat, halollik va katta marosimlarda hech qachon uyaltirmaydigan mas’uliyatimiz uchun tanlashadi.",
+        adv_1_t: "100% Halol va Yangi So‘yilgan Tovuq",
+        adv_1_d: "Biz faqat ishonchli halol parrandachilik xo‘jaliklaridan har kuni yangi keltiriladigan tovuqlardan foydalanamiz.",
+        adv_2_t: "Og‘ir Cho‘yan Press Texnologiyasi",
+        adv_2_d: "Maxsus og‘ir press ostida qovurilgan tovuqning barcha qismi bir tekis oltin rangda qizaradi, ichi esa suvli qoladi.",
+        adv_3_t: "Maxfiy Tabiiy Ziravorlar Marinadi",
+        adv_3_d: "Sarimsoq, kashnich urug‘i, shirin paprika va tog‘ o‘tlaridan iborat tabiiy marinad go‘shtning eng chuqur qatlamigacha singadi.",
+        adv_4_t: "Katta To‘ylar Uchun Katta Quvvat",
+        adv_4_d: "Bir vaqtning o‘zida o‘nlab qozon va presslarda ishlovchi professional jamoamiz 500+ porsiyani ham bir vaqtda issiq chiqaradi.",
+        adv_5_t: "Aniq Vaqt va Intizom («Shtab» Standarti)",
+        adv_5_d: "To‘y va ehsonlarda har bir daqiqa muhimligini bilamiz. Buyurtmangiz kelishilgan soatdan kechikmasdan yetkaziladi.",
+        adv_6_t: "2 ta Qulay Filial va Hamyonbop Narx",
+        adv_6_d: "Shtab va Chilonzor filiallarimiz orqali shaharning istalgan nuqtasiga tez yetib boramiz. Ulgurji mijozlar uchun maxsus chegirmalar bor.",
+        faq_badge: "Savol va Javoblar",
+        faq_title: "Ko‘p Beriladigan Savollar (FAQ)",
+        faq_subtitle: "Buyurtma berish, to‘y va marosimlar uchun yetkazib berish shartlari haqida eng muhim ma’lumotlar.",
+        branches_badge: "Filiallar va Buyurtma",
+        branches_title: "Filiallarimiz bilan Bog‘laning yoki Onlayn Buyurtma Bering",
+        branches_subtitle: "O‘zingizga yaqin filialni tanlab qo‘ng‘iroq qiling yoki quyidagi buyurtma formasini to‘ldirib, to‘g‘ridan-to‘g‘ri filialning WhatsApp raqamiga yuboring.",
+        branch_main_badge: "Asosiy Markaziy Filial",
+        branch_1_name: "SHTAB Filiali",
+        branch_1_address: "Toshkent sh., Shtab hududi. Yirik to‘y, marosim va olib ketish buyurtmalari markazi.",
+        branch_2_badge: "Chilonzor Hududiy Filiali",
+        branch_2_name: "CHILONZOR Filiali",
+        branch_2_address: "Toshkent sh., Chilonzor tumani. Tezkor yetkazib berish, oilaviy va marosim buyurtmalari markazi.",
+        click_to_call: "Qo‘ng‘iroq qilish uchun bosing:",
+        btn_call_branch: "Qo‘ng‘iroq qilish",
+        form_badge: "Onlayn Buyurtma Tizimi",
+        form_title: "Buyurtmani Rasmiylashtirish",
+        form_subtitle: "Ma’lumotlarni kiriting — buyurtmangiz tayyor xabar ko‘rinishida tanlangan filialning WhatsApp raqamiga yuboriladi.",
+        lbl_name: "Ismingiz *",
+        ph_name: "Masalan: Sardorbek",
+        lbl_phone: "Telefon raqamingiz *",
+        lbl_dish: "Taom turini tanlang *",
+        lbl_qty: "Miqdori (porsiya / kg / set) *",
+        lbl_branch: "Filialni tanlang *",
+        opt_branch_shtab: "Shtab filiali (+998 99 953 05 05)",
+        opt_branch_chilonzor: "Chilonzor filiali (+998 99 753 05 05)",
+        lbl_date: "Sana *",
+        lbl_time: "Vaqt *",
+        lbl_notes: "Qo‘shimcha izoh (Manzil, tadbir turi, bo‘laklash usuli)",
+        ph_notes: "Masalan: To'y marosimi uchun, 4 bo'lakka bo'lingan holda, achchiq sous ko'proq bo'lsin...",
+        lbl_estimated_total: "Taxminiy hisob:",
+        btn_submit_whatsapp: "WhatsApp orqali yuborish",
+        footer_desc: "Haqiqiy cho‘yan pressda qovurilgan 100% halol tovuq tabaka, tovuq oyoqlari va qanotlari. To‘ylar, oilaviy tadbirlar va marosimlar uchun ishonchli hamkoringiz.",
+        footer_nav_title: "Bo‘limlar",
+        footer_branches_title: "Filiallar va Aloqa",
+        footer_hours: "Har kuni: 09:00 – 23:00",
+        footer_rights: "Barcha huquqlar himoyalangan.",
+        footer_tagline: "100% Halol Tovuq Taomlari va Marosimlar Xizmati",
+        modal_title: "Tezkor Buyurtma Berish",
+        modal_subtitle: "SHTAB TABAKA • WhatsApp orqali tasdiqlash",
+        toast_title: "Buyurtma tayyorlandi!",
+        toast_open_wa: "WhatsApp-ni ochish",
+        toast_copy: "Nusxalash",
+        copied_label: "Nusxalandi!",
+        card_order_btn: "Buyurtma berish"
+      },
+      ru: {
+        topbar_text: "Принимаем заказы на 100% Халяль цыпленка табака для свадеб, банкетов и мероприятий!",
+        branch_shtab_short: "Штаб:",
+        branch_chilonzor_short: "Чиланзар:",
+        logo_subtitle: "Премиальные Блюда из Курицы",
+        nav_about: "О нас",
+        nav_menu: "Меню",
+        nav_services: "Услуги",
+        nav_gallery: "Галерея",
+        nav_advantages: "Преимущества",
+        nav_faq: "FAQ",
+        nav_branches: "Филиалы",
+        btn_order_now: "Заказать",
+        hero_badge: "100% Халяль • Жарка под чугунным прессом",
+        hero_title_1: "Настоящая Хрустящая",
+        hero_title_2: "SHTAB TABAKA",
+        hero_title_3: "Украшение Свадеб, Торжеств и Застолий!",
+        hero_desc: "Сочная, ароматная курица табака и куриные голени с золотистой корочкой, обжаренные под тяжелым прессом. Доставляем горячими как для семейного ужина, так и для масштабных свадеб и мероприятий до 500 гостей.",
+        hero_cta_order: "Оформить заказ сейчас",
+        hero_cta_menu: "Посмотреть меню",
+        branch_1_label: "Филиал Штаб",
+        branch_2_label: "Филиал Чиланзар",
+        hero_img_badge: "Бестселлер #1",
+        hero_card_sub: "По фирменному рецепту",
+        hero_card_title: "Классическая Штаб Табака (Целая)",
+        hero_card_weight: "750–850 гр",
+        stat_1: "Лет опыта и традиций",
+        stat_2: "Проведенных свадеб и банкетов",
+        stat_3: "Халяль и свежий продукт",
+        stat_4: "Активных филиала в Ташкенте",
+        about_card_1_title: "Тяжелый чугунный пресс",
+        about_card_1_desc: "Обеспечивает хрустящую золотистую корочку снаружи и нежное сочное мясо внутри.",
+        about_card_2_title: "Отборные специи",
+        about_card_2_desc: "Натуральный маринад из свежего чеснока и горных специй без искусственных добавок.",
+        about_badge: "О компании",
+        about_title: "SHTAB TABAKA — Гарантия Безупречного Вкуса и Изобильного Стола",
+        about_p1: "«SHTAB TABAKA» — это сочетание многолетнего кулинарного мастерства, строгих стандартов Халяль и узбекского гостеприимства. Ежедневно мы отбираем только свежую охлажденную птицу, прошедшую ветеринарный контроль.",
+        about_p2: "Наше главное направление — не только доставка горячей табака на дом, но и профессиональное обслуживание свадеб, акика, эхсонов, утренних пловов и юбилеев с подачей сотен порций точно в срок.",
+        about_feat_1_t: "Свежее мясо каждый день",
+        about_feat_1_d: "Никакой заморозки — только свежая охлажденная местная птица.",
+        about_feat_2_t: "Чистое растительное масло",
+        about_feat_2_d: "Регулярное обновление масла и строгий контроль каждой партии жарки.",
+        about_feat_3_t: "Оптом для торжеств",
+        about_feat_3_d: "Готовим до 500+ порций в день для свадеб, банкетов и мероприятий.",
+        about_feat_4_t: "Термо-упаковка",
+        about_feat_4_d: "Доставляем в пищевых алюминиевых контейнерах и специальных термо-боксах.",
+        about_cta: "Заказать на мероприятие",
+        menu_badge: "Наше Меню",
+        menu_title: "Фирменные Блюда SHTAB TABAKA",
+        menu_subtitle: "Каждое блюдо готовится индивидуально под заказ с пылу с жару и подается с фирменным соусом.",
+        filter_all: "Все блюда",
+        filter_tabaka: "Цыпленок Табака",
+        filter_legs: "Голени и Крылышки",
+        filter_sets: "Сеты для Свадеб и Компаний",
+        filter_sides: "Гарниры и Соусы",
+        menu_bulk_tag: "Спецпредложение",
+        menu_bulk_title: "Планируете свадьбу, эхсон или большое мероприятие?",
+        menu_bulk_desc: "При заказе от 20 целых табака или от 10 кг куриных голеней предоставляется оптовая скидка и бесплатная термо-упаковка!",
+        menu_bulk_btn: "Рассчитать оптовый заказ",
+        services_badge: "Наши Услуги",
+        services_title: "Специальное Обслуживание Свадеб и Мероприятий",
+        services_subtitle: "Каждая порция для ваших гостей выглядит безупречно, сохраняет хрустящую корочку и подается горячей.",
+        srv_1_tag: "От 50 до 1000 гостей",
+        srv_1_title: "Свадьбы и Гранд-Банкеты",
+        srv_1_desc: "Отборные румяные цыплята табака одинакового веса и порционные ассорти для свадебных столов. Доставляем горячими в согласованное с банкетным залом время.",
+        srv_1_note: "Специальные оптовые цены",
+        srv_2_tag: "100% Халяль",
+        srv_2_title: "Марасимы, Эхсон и Акика",
+        srv_2_desc: "Целые или аккуратно разделенные на порции блюда из курицы для поминальных обедов, эхсона, акика и ифтаров. Готовим с соблюдением всех норм Халяль.",
+        srv_2_note: "Доставка с раннего утра",
+        srv_3_tag: "Семейные Сеты",
+        srv_3_title: "Дни Рождения, Встречи и Семейные Ужины",
+        srv_3_desc: "Готовые комбо-сеты для посиделок с друзьями и дней рождения: хрустящая табака, золотистые крылышки, картофель по-деревенски и фирменные соусы.",
+        srv_3_note: "Быстрая доставка",
+        srv_4_tag: "Доставка Горячим",
+        srv_4_title: "Доставка в Профессиональных Термо-Боксах",
+        srv_4_desc: "Чтобы блюда не остыли в дороге, мы используем алюминиевые гастроемкости и термо-контейнеры. Доставляем по всему Ташкенту точно ко времени подачи.",
+        srv_4_note: "Отправка из 2 филиалов",
+        srv_btn: "Оформить заказ",
+        gallery_badge: "Фотогалерея",
+        gallery_title: "Реальные Фото Наших Блюд и Подачи",
+        gallery_subtitle: "На каждой фотографии — настоящие блюда кухни SHTAB TABAKA. Нажмите на фото для увеличения.",
+        adv_badge: "Почему выбирают нас?",
+        adv_title: "6 Причин Выбрать SHTAB TABAKA",
+        adv_subtitle: "Нас ценят за стабильное качество, честный вес порций и пунктуальность на самых ответственных мероприятиях.",
+        adv_1_t: "100% Халяль и Охлажденная Птица",
+        adv_1_d: "Мы работаем только со свежей курицей ежедневной поставки от сертифицированных халяльных птицефабрик.",
+        adv_2_t: "Технология Тяжелого Чугунного Пресса",
+        adv_2_d: "Под массивным прессом курица прожаривается равномерно со всех сторон, оставаясь сочной внутри.",
+        adv_3_t: "Секретный Маринад из Натуральных Специй",
+        adv_3_d: "Чеснок, кориандр, сладкая паприка и горные травы глубоко пропитывают мясо неповторимым ароматом.",
+        adv_4_t: "Производственная Мощность для Банкетов",
+        adv_4_d: "Команда поваров и десятки профессиональных прессов позволяют выдавать более 500 горячих порций одновременно.",
+        adv_5_t: "Дисциплина и Точность («Штаб» Стандарт)",
+        adv_5_d: "Мы знаем цену каждой минуты на свадьбе или мероприятии. Заказ доставляется строго к назначенному времени.",
+        adv_6_t: "2 Удобных Филиала и Выгодные Цены",
+        adv_6_d: "Филиалы Штаб и Чиланзар охватывают весь город. Для организаторов торжеств действуют оптовые скидки.",
+        faq_badge: "Вопросы и Ответы",
+        faq_title: "Часто Задаваемые Вопросы (FAQ)",
+        faq_subtitle: "Подробная информация об условиях заказа, доставке на свадьбы и способах оплаты.",
+        branches_badge: "Филиалы и Заказ",
+        branches_title: "Свяжитесь с Филиалом или Оформите Онлайн-Заказ",
+        branches_subtitle: "Позвоните в ближайший филиал в один клик или заполните форму ниже для отправки готового заказа в WhatsApp.",
+        branch_main_badge: "Центральный Филиал",
+        branch_1_name: "Филиал ШТАБ",
+        branch_1_address: "г. Ташкент, ориентир Штаб. Центр приема крупных свадебных, банкетных заказов и самовывоза.",
+        branch_2_badge: "Чиланзарский Филиал",
+        branch_2_name: "Филиал ЧИЛАНЗАР",
+        branch_2_address: "г. Ташкент, Чиланзарский район. Быстрая доставка, семейные сеты и обслуживание мероприятий.",
+        click_to_call: "Нажмите для звонка:",
+        btn_call_branch: "Позвонить",
+        form_badge: "Система Онлайн-Заказа",
+        form_title: "Оформление Заказа",
+        form_subtitle: "Заполните форму — ваш заказ будет сформирован и отправлен напрямую в WhatsApp выбранного филиала.",
+        lbl_name: "Ваше имя *",
+        ph_name: "Например: Сардорбек",
+        lbl_phone: "Номер телефона *",
+        lbl_dish: "Выберите блюдо *",
+        lbl_qty: "Количество (порций / кг / сетов) *",
+        lbl_branch: "Выберите филиал *",
+        opt_branch_shtab: "Филиал Штаб (+998 99 953 05 05)",
+        opt_branch_chilonzor: "Филиал Чиланзар (+998 99 753 05 05)",
+        lbl_date: "Дата *",
+        lbl_time: "Время *",
+        lbl_notes: "Комментарий (Адрес, тип мероприятия, нарезка)",
+        ph_notes: "Например: Для свадебного банкета, разделить каждую на 4 части, больше острого соуса...",
+        lbl_estimated_total: "Предварительная сумма:",
+        btn_submit_whatsapp: "Отправить заказ в WhatsApp",
+        footer_desc: "Настоящая 100% халяльная курица табака, голени и крылышки под чугунным прессом. Надежный партнер для свадеб, семейных торжеств и мероприятий.",
+        footer_nav_title: "Разделы сайта",
+        footer_branches_title: "Филиалы и Контакты",
+        footer_hours: "Ежедневно: 09:00 – 23:00",
+        footer_rights: "Все права защищены.",
+        footer_tagline: "100% Халяль Блюда из Курицы и Обслуживание Торжеств",
+        modal_title: "Быстрый Заказ",
+        modal_subtitle: "SHTAB TABAKA • Подтверждение через WhatsApp",
+        toast_title: "Заказ сформирован!",
+        toast_open_wa: "Открыть WhatsApp",
+        toast_copy: "Скопировать",
+        copied_label: "Скопировано!",
+        card_order_btn: "Заказать"
+      }
+    };
+
+    // --------------------------------------------------------------------------
+    // 5. FORMAT PRICE HELPER
+    // --------------------------------------------------------------------------
+    function formatPrice(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' UZS';
+    }
+
+    // --------------------------------------------------------------------------
+    // 6. RENDER MENU CARDS
+    // --------------------------------------------------------------------------
+    function renderMenu() {
+      const grid = document.getElementById('menu-grid');
+      if (!grid) return;
+
+      const filtered = currentCategory === 'all'
+        ? menuItems
+        : menuItems.filter(item => item.category === currentCategory);
+
+      grid.innerHTML = filtered.map(item => `
+        <article class="menu-card bg-white rounded-3xl border-2 border-burgundy/30 overflow-hidden flex flex-col justify-between">
+          <div>
+            <!-- Image Container -->
+            <div class="relative aspect-[16/11] bg-charcoal overflow-hidden border-b-2 border-gold">
+              <img
+                src="${item.image}"
+                alt="${item.title[currentLang]}"
+                onerror="this.onerror=null;this.src='https://placehold.co/700x500/6B0F1A/F5B800?text=SHTAB+TABAKA';"
+                class="menu-img w-full h-full object-cover"
+                loading="lazy"
+              />
+              <span class="absolute top-3 left-3 bg-burgundy text-gold border-2 border-gold px-3 py-1 rounded-lg text-xs font-extrabold uppercase tracking-wider">
+                ${item.badge[currentLang]}
+              </span>
+              <span class="absolute bottom-3 right-3 bg-charcoal/95 text-white border border-gold px-3 py-1 rounded-lg text-xs font-bold">
+                <i class="fa-solid fa-weight-hanging text-gold mr-1"></i>${item.weight[currentLang]}
+              </span>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <h3 class="font-serif text-xl sm:text-2xl font-extrabold text-charcoal mb-2">
+                ${item.title[currentLang]}
+              </h3>
+              <p class="text-muted text-sm leading-relaxed">
+                ${item.desc[currentLang]}
+              </p>
+            </div>
+          </div>
+
+          <!-- Card Footer: Price & Order Trigger -->
+          <div class="px-6 pb-6 pt-3 border-t border-sand flex items-center justify-between gap-3">
+            <div>
+              <span class="block text-[11px] uppercase font-bold text-muted">${currentLang === 'uz' ? 'Narxi:' : 'Цена:'}</span>
+              <span class="font-serif text-xl sm:text-2xl font-extrabold text-burgundy">
+                ${formatPrice(item.price)}
+              </span>
+            </div>
+            <button
+              type="button"
+              onclick="openOrderModal('${item.id}')"
+              class="btn-solid-gold font-extrabold text-xs sm:text-sm px-4 py-3 rounded-xl flex items-center gap-2 shrink-0"
+            >
+              <i class="fa-solid fa-plus"></i>
+              <span>${translations[currentLang].card_order_btn}</span>
+            </button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // --------------------------------------------------------------------------
+    // 7. FILTER MENU BY CATEGORY
+    // --------------------------------------------------------------------------
+    function filterMenu(category) {
+      currentCategory = category;
+      const buttons = document.querySelectorAll('.menu-filter-btn');
+      buttons.forEach(btn => {
+        const isMatch = btn.getAttribute('data-filter') === category;
+        if (isMatch) {
+          btn.className = 'menu-filter-btn px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider border-2 border-burgundy bg-burgundy text-gold shadow-solid-gold transition-all';
+        } else {
+          btn.className = 'menu-filter-btn px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm uppercase tracking-wider border-2 border-burgundy bg-white text-charcoal hover:bg-burgundy hover:text-white transition-all';
+        }
+      });
+      renderMenu();
+    }
+
+    // --------------------------------------------------------------------------
+    // 8. RENDER GALLERY & LIGHTBOX FUNCTIONALITY
+    // --------------------------------------------------------------------------
+    function renderGallery() {
+      const grid = document.getElementById('gallery-grid');
+      if (!grid) return;
+
+      grid.innerHTML = galleryItems.map((item, idx) => `
+        <div
+          onclick="openLightbox(${idx})"
+          class="group cursor-pointer bg-burgundy rounded-3xl border-4 border-burgundy overflow-hidden shadow-solid-burgundy relative aspect-[4/3]"
+        >
+          <img
+            src="${item.src}"
+            alt="${item.caption[currentLang]}"
+            onerror="this.onerror=null;this.src='https://placehold.co/800x600/6B0F1A/F5B800?text=SHTAB+TABAKA';"
+            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/55 transition-colors flex flex-col justify-between p-5">
+            <div class="flex justify-between items-start">
+              <span class="bg-burgundy text-gold border border-gold px-3 py-1 rounded-lg text-xs font-extrabold uppercase">
+                ${item.tag[currentLang]}
+              </span>
+              <span class="w-10 h-10 rounded-xl bg-gold text-charcoal flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </span>
+            </div>
+            <div class="bg-burgundy/95 border-2 border-gold p-3.5 rounded-2xl translate-y-2 group-hover:translate-y-0 transition-transform">
+              <p class="text-white font-bold text-xs sm:text-sm leading-snug">
+                ${item.caption[currentLang]}
+              </p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openLightbox(index) {
+      currentLightboxIndex = index;
+      updateLightboxView();
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function navigateLightbox(step) {
+      currentLightboxIndex = (currentLightboxIndex + step + galleryItems.length) % galleryItems.length;
+      updateLightboxView();
+    }
+
+    function updateLightboxView() {
+      const item = galleryItems[currentLightboxIndex];
+      const imgEl = document.getElementById('lightbox-img');
+      const captionEl = document.getElementById('lightbox-caption');
+      const counterEl = document.getElementById('lightbox-counter');
+
+      imgEl.src = item.src;
+      imgEl.alt = item.caption[currentLang];
+      captionEl.textContent = item.caption[currentLang];
+      counterEl.textContent = `${currentLightboxIndex + 1} / ${galleryItems.length} • ${item.tag[currentLang]}`;
+    }
+
+    // --------------------------------------------------------------------------
+    // 9. RENDER FAQ ACCORDION
+    // --------------------------------------------------------------------------
+    function renderFaq() {
+      const container = document.getElementById('faq-container');
+      if (!container) return;
+
+      container.innerHTML = faqItems.map((item, idx) => `
+        <div class="faq-item ${idx === 0 ? 'open' : ''} bg-white border-2 border-burgundy rounded-2xl overflow-hidden shadow-sm">
+          <button
+            type="button"
+            onclick="toggleFaq(this)"
+            class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none"
+          >
+            <span class="font-serif text-lg sm:text-xl font-bold text-charcoal">
+              ${item.q[currentLang]}
+            </span>
+            <span class="faq-icon w-9 h-9 rounded-xl bg-burgundy text-gold flex items-center justify-center shrink-0 transition-transform duration-300">
+              <i class="fa-solid fa-chevron-down text-sm"></i>
+            </span>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="pb-5 pt-1 text-muted text-sm sm:text-base leading-relaxed border-t border-sand">
+              ${item.a[currentLang]}
+            </p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function toggleFaq(buttonEl) {
+      const parent = buttonEl.closest('.faq-item');
+      const isOpen = parent.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+      if (!isOpen) {
+        parent.classList.add('open');
+      }
+    }
+
+    // --------------------------------------------------------------------------
+    // 10. POPULATE DISH SELECT DROPDOWNS & LIVE PRICE CALCULATION
+    // --------------------------------------------------------------------------
+    function populateDishSelects(selectedId) {
+      const selects = [document.getElementById('page-dish'), document.getElementById('modal-dish')];
+      selects.forEach(select => {
+        if (!select) return;
+        const previousValue = selectedId || select.value || menuItems[0].id;
+        select.innerHTML = menuItems.map(item => `
+          <option value="${item.id}" ${item.id === previousValue ? 'selected' : ''}>
+            ${item.title[currentLang]} — ${formatPrice(item.price)}
+          </option>
+        `).join('');
+      });
+      updateCalculatedPrice('page');
+      updateCalculatedPrice('modal');
+    }
+
+    function adjustQty(prefix, delta) {
+      const input = document.getElementById(`${prefix}-qty`);
+      if (!input) return;
+      let val = parseInt(input.value, 10) || 1;
+      val = Math.max(1, Math.min(1000, val + delta));
+      input.value = val;
+      updateCalculatedPrice(prefix);
+    }
+
+    function updateCalculatedPrice(prefix) {
+      const select = document.getElementById(`${prefix}-dish`);
+      const qtyInput = document.getElementById(`${prefix}-qty`);
+      const totalEl = document.getElementById(`${prefix}-total-price`);
+      if (!select || !qtyInput || !totalEl) return;
+
+      const dish = menuItems.find(m => m.id === select.value) || menuItems[0];
+      const qty = Math.max(1, parseInt(qtyInput.value, 10) || 1);
+      const total = dish.price * qty;
+      totalEl.textContent = formatPrice(total);
+    }
+
+    // --------------------------------------------------------------------------
+    // 11. ORDER MODAL OPEN / CLOSE
+    // --------------------------------------------------------------------------
+    function openOrderModal(preselectDishId) {
+      if (preselectDishId) {
+        const modalSelect = document.getElementById('modal-dish');
+        if (modalSelect) {
+          modalSelect.value = preselectDishId;
+          updateCalculatedPrice('modal');
+        }
+      }
+      const modal = document.getElementById('order-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeOrderModal() {
+      const modal = document.getElementById('order-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // --------------------------------------------------------------------------
+    // 12. HANDLE ORDER SUBMISSION TO BRANCH WHATSAPP
+    // --------------------------------------------------------------------------
+    let lastGeneratedOrderText = '';
+
+    function handleOrderSubmit(event, prefix) {
+      event.preventDefault();
+
+      const name = document.getElementById(`${prefix}-name`).value.trim();
+      const phone = document.getElementById(`${prefix}-phone`).value.trim();
+      const dishId = document.getElementById(`${prefix}-dish`).value;
+      const qty = Math.max(1, parseInt(document.getElementById(`${prefix}-qty`).value, 10) || 1);
+      const branchKey = document.getElementById(`${prefix}-branch`).value;
+      const dateVal = document.getElementById(`${prefix}-date`).value;
+      const timeVal = document.getElementById(`${prefix}-time`).value;
+      const notes = document.getElementById(`${prefix}-notes`).value.trim();
+
+      const dish = menuItems.find(m => m.id === dishId) || menuItems[0];
+      const totalSum = formatPrice(dish.price * qty);
+
+      // Branch Phone Mapping
+      const branchConfig = {
+        shtab: {
+          waNumber: '998999530505',
+          displayPhone: '+998 99 953 05 05',
+          nameUz: 'Shtab filiali',
+          nameRu: 'Филиал Штаб'
+        },
+        chilonzor: {
+          waNumber: '998997530505',
+          displayPhone: '+998 99 753 05 05',
+          nameUz: 'Chilonzor filiali',
+          nameRu: 'Филиал Чиланзар'
+        }
+      };
+
+      const selectedBranch = branchConfig[branchKey] || branchConfig.shtab;
+      const branchTitle = currentLang === 'uz' ? selectedBranch.nameUz : selectedBranch.nameRu;
+
+      // Build Formatted WhatsApp Message
+      let message = '';
+      if (currentLang === 'uz') {
+        message =
+          `🔥 *YANGI BUYURTMA — SHTAB TABAKA*\n` +
+          `━━━━━━━━━━━━━━━━━━━━\n` +
+          `👤 *Mijoz:* ${name}\n` +
+          `📞 *Telefon:* ${phone}\n` +
+          `🍗 *Taom:* ${dish.title.uz}\n` +
+          `🔢 *Miqdori:* ${qty} (${dish.weight.uz})\n` +
+          `💰 *Taxminiy summa:* ${totalSum}\n` +
+          `📍 *Filial:* ${branchTitle} (${selectedBranch.displayPhone})\n` +
+          `📅 *Sana va vaqt:* ${dateVal} | ${timeVal}\n` +
+          (notes ? `📝 *Qo'shimcha izoh:* ${notes}\n` : '') +
+          `━━━━━━━━━━━━━━━━━━━━`;
+      } else {
+        message =
+          `🔥 *НОВЫЙ ЗАКАЗ — SHTAB TABAKA*\n` +
+          `━━━━━━━━━━━━━━━━━━━━\n` +
+          `👤 *Клиент:* ${name}\n` +
+          `📞 *Телефон:* ${phone}\n` +
+          `🍗 *Блюдо:* ${dish.title.ru}\n` +
+          `🔢 *Количество:* ${qty} (${dish.weight.ru})\n` +
+          `💰 *Предварительная сумма:* ${totalSum}\n` +
+          `📍 *Филиал:* ${branchTitle} (${selectedBranch.displayPhone})\n` +
+          `📅 *Дата и время:* ${dateVal} | ${timeVal}\n` +
+          (notes ? `📝 *Комментарий:* ${notes}\n` : '') +
+          `━━━━━━━━━━━━━━━━━━━━`;
+      }
+
+      lastGeneratedOrderText = message;
+      const waUrl = `https://wa.me/${selectedBranch.waNumber}?text=${encodeURIComponent(message)}`;
+
+      if (prefix === 'modal') {
+        closeOrderModal();
+      }
+
+      // Show Confirmation Toast & Open WhatsApp
+      const toast = document.getElementById('order-toast');
+      const branchInfo = document.getElementById('toast-branch-info');
+      const previewEl = document.getElementById('toast-preview-text');
+      const waLink = document.getElementById('toast-wa-link');
+
+      branchInfo.textContent = `${branchTitle}: ${selectedBranch.displayPhone}`;
+      previewEl.textContent = message;
+      waLink.href = waUrl;
+      toast.classList.remove('hidden');
+
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    function hideOrderToast() {
+      document.getElementById('order-toast').classList.add('hidden');
+    }
+
+    function copyOrderText() {
+      if (!lastGeneratedOrderText) return;
+      const tempArea = document.createElement('textarea');
+      tempArea.value = lastGeneratedOrderText;
+      document.body.appendChild(tempArea);
+      tempArea.select();
+      try {
+        document.execCommand('copy');
+        const label = document.getElementById('copy-btn-label');
+        if (label) {
+          label.textContent = translations[currentLang].copied_label;
+          setTimeout(() => {
+            label.textContent = translations[currentLang].toast_copy;
+          }, 2000);
+        }
+      } catch (err) {
+        console.error('Copy error:', err);
+      }
+      document.body.removeChild(tempArea);
+    }
+
+    // --------------------------------------------------------------------------
+    // 13. FULL LANGUAGE SWITCHER (UZ / RU)
+    // --------------------------------------------------------------------------
+    function setLanguage(lang) {
+      if (lang !== 'uz' && lang !== 'ru') return;
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      // Update Toggle Buttons UI
+      const uzBtn = document.getElementById('lang-uz-btn');
+      const ruBtn = document.getElementById('lang-ru-btn');
+      if (lang === 'uz') {
+        uzBtn.className = 'px-2.5 py-1 rounded-md text-xs font-extrabold uppercase transition-colors bg-gold text-charcoal';
+        ruBtn.className = 'px-2.5 py-1 rounded-md text-xs font-extrabold uppercase transition-colors text-white hover:text-gold';
+      } else {
+        ruBtn.className = 'px-2.5 py-1 rounded-md text-xs font-extrabold uppercase transition-colors bg-gold text-charcoal';
+        uzBtn.className = 'px-2.5 py-1 rounded-md text-xs font-extrabold uppercase transition-colors text-white hover:text-gold';
+      }
+
+      // Translate all static [data-i18n] nodes
+      const dict = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+
+      // Translate placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (dict[key]) {
+          el.setAttribute('placeholder', dict[key]);
+        }
+      });
+
+      // Re-render dynamic sections
+      renderMenu();
+      renderGallery();
+      renderFaq();
+      populateDishSelects();
+    }
+
+    // --------------------------------------------------------------------------
+    // 14. MOBILE MENU & INITIALIZATION
+    // --------------------------------------------------------------------------
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('mobile-menu-icon');
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        icon.className = 'fa-solid fa-xmark';
+      } else {
+        menu.classList.add('hidden');
+        icon.className = 'fa-solid fa-bars';
+      }
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('mobile-menu-icon');
+      menu.classList.add('hidden');
+      icon.className = 'fa-solid fa-bars';
+    }
+
+    // Keyboard Support for Modals & Lightbox
+    document.addEventListener('keydown', (e) => {
+      const lightbox = document.getElementById('lightbox-modal');
+      const orderModal = document.getElementById('order-modal');
+
+      if (!lightbox.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+      } else if (!orderModal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeOrderModal();
+      }
+    });
+
+    // Initialize Default Date, Scroll Reveal, and Render Content
+    window.addEventListener('DOMContentLoaded', () => {
+      // Set default date to today
+      const todayStr = new Date().toISOString().split('T')[0];
+      const pageDate = document.getElementById('page-date');
+      const modalDate = document.getElementById('modal-date');
+      if (pageDate) pageDate.value = todayStr;
+      if (modalDate) modalDate.value = todayStr;
+
+      // Initial render in Uzbek
+      setLanguage('uz');
+
+      // IntersectionObserver for smooth reveal animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      // Sticky Header shadow enhancement on scroll
+      const header = document.getElementById('main-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 30) {
+          header.classList.add('shadow-elevated');
+        } else {
+          header.classList.remove('shadow-elevated');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
